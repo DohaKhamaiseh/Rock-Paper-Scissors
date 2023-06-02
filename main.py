@@ -3,6 +3,16 @@ import eel
 
 eel.init('web')
 
+rounds = 0
+user_score = 0
+computer_score = 0
+
+username = ""
+userChoise = ""
+computerChoice = ""
+
+
+
 
 
 
