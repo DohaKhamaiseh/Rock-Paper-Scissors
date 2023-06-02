@@ -57,5 +57,26 @@ def mouseClassic(userChoise):
 
     return result
 
+
+@eel.expose
+def Avatar(userChoise):
+    global user_score, computer_score, rounds
+    choices = ["Fire", "Water", "Wind", "Earth"]
+    computer_choice = random.choice(choices)
+
+    if userChoise == computer_choice:
+        result = "It's a tie!"
+    elif (userChoise == "Earth" and computer_choice == "Water") or \
+            (userChoise == "Water" and computer_choice == "Fire") or \
+            (userChoise == "Fire" and computer_choice == "Wind") or \
+            (userChoise == "Wind" and computer_choice == "Earth"):
+        result = "You win!"
+        user_score += 1
+    else:
+        result = "Computer wins!"
+        computer_score += 1
+
+    return result
+
 eel.start('index.html', port=8080)
 
