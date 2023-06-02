@@ -4,11 +4,6 @@ import eel
 eel.init('web')
 
 
-# @eel.expose
-# def exit_app():
-#     eel._exiting = True
-#     exit()
-
 
 
 
