@@ -57,6 +57,47 @@ def mouseClassic(userChoise):
 
     return result
 
+@eel.expose
+def arenaMode(userChoice):
+    global user_score, computer_score, userChoiceArenaMode, computerChoiceArenaMode
+    userScoreArenaMode=user_score
+    computerScoreArenaMode= computer_score
+    userChoiceArenaMode= userChoice
+    
+    choices = ["Rock", "Paper", "Scissors"]
+    computerChoiceArenaMode = random.choice(choices)
+    if userChoiceArenaMode == computerChoiceArenaMode:
+        result = "It's a tie!"
+    elif (userChoiceArenaMode == "Rock" and computerChoiceArenaMode == "Scissors") or \
+        (userChoiceArenaMode == "Paper" and computerChoiceArenaMode == "Rock") or \
+        (userChoiceArenaMode == "Scissors" and computerChoiceArenaMode == "Paper"):
+        result = "You win!"
+        userScoreArenaMode += 1
+    else:
+        result = "Computer wins!"
+        computerScoreArenaMode += 1
+
+    return result
+
+@eel.expose
+def userScoreArena():
+    global userScoreArenaMode
+    return userScoreArenaMode
+
+@eel.expose
+def computerScoreArena():
+    global computerScoreArenaMode
+    return computerScoreArenaMode
+
+@eel.expose
+def userChoiceArena():
+    global userChoiceArenaMode
+    return userChoiceArenaMode
+
+@eel.expose
+def computerChoiceArena():
+    global computerChoiceArenaMode
+    return computerChoiceArenaMode
 
 @eel.expose
 def Avatar(userChoise):
