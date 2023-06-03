@@ -78,6 +78,7 @@ def Avatar(userChoise):
 
     return result
 
+
 @eel.expose
 def challenge_mode(user_choice):
     global rounds, userScoreChallengeMode , computerScoreChallengeMode,  playerChoice, computerChoice, coins
@@ -119,6 +120,47 @@ def coinsChallengeMode():
     global coins
     coinsChallenge = coins
     return coinsChallenge
+
+
+@eel.expose
+def reversMode(userChoise):
+    global user_score, computer_score, rounds, userScoreReverseMode , computerScoreReverseMode , computerChoiceReverseMode
+    userScoreReverseMode = user_score
+    computerScoreReverseMode = computer_score
+
+    choices = ["Rock", "Paper", "Scissors"]
+    computerChoiceReverseMode = random.choice(choices)
+
+    if userChoise == computerChoiceReverseMode:
+        result = "It's a tie!"
+    elif (userChoise == "Rock" and computerChoiceReverseMode == "Scissors") or \
+        (userChoise == "Paper" and computerChoiceReverseMode == "Rock") or \
+        (userChoise == "Scissors" and computerChoiceReverseMode == "Paper"):
+        result = "Computer wins!" 
+        userScoreReverseMode += 1
+    else:
+        result = "You win!"
+        computerScoreReverseMode += 1
+
+    return result
+
+@eel.expose
+def userScoreReverse():
+    global userScoreReverseMode
+    return userScoreReverseMode
+
+@eel.expose
+def computerScoreReverse():
+    global computerScoreReverseMode
+    return computerScoreReverseMode
+
+
+@eel.expose
+def computerChoiceReverse():
+    global computerChoiceReverseMode
+    return computerChoiceReverseMode
+
+
 
 eel.start('index.html', port=8080)
 

@@ -13,19 +13,32 @@
 <body>
     <header>
         <h1>Rock Paper Scissors</h1>
+        <h1>Revers Mode</h1>
     </header>
 
     <main>
-        <h2>reverse game logic</h2>
-        <button onclick="window.location.href = './reverseMode.html';">Return</button>
-    </main>
+    
+        <button id="btnRock">Rock</button>
+        <button id="btnPaper">Paper</button>
+        <button id="btnScissor">Scissors</button>
+        <h3 id="userChoice"></h3>
 
+        <h3 id="whatUserPlayed"></h3>
+        <h3 id="whatComputerPlayed"></h3>
+        <h3 id="roundResult" style="display: none;"></h3>
+        <h3 id="userScore"></h3>
+        <h3 id="computerScore"></h3>    
+              
+        
+        <button onclick="window.location.href = './reverseMode.html';">Return</button>
+
+    </main>
 
     <footer class="indexfooter">
 
     </footer>
 
-    <script src="reverse.js"></script>
+    <script src="startRevers.js"></script>
 
 
 </body>
