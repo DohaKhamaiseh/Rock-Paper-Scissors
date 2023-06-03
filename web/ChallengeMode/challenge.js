@@ -7,8 +7,7 @@ async function userChoiseRock() {
     let coins = await eel.coinsChallengeMode()()
     document.getElementById("userChoise").textContent = result;
     rounds -= 1
-    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2 || coins == 0 )
-    {
+    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2 || coins == 0) {
         window.location.href = './endChallenge.html'
     }
     else {
@@ -26,8 +25,7 @@ async function userChoisePaper() {
     let coins = await eel.coinsChallengeMode()()
     document.getElementById("userChoise").textContent = result;
     rounds -= 1
-    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2 || coins == 0)
-    {
+    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2 || coins == 0) {
         window.location.href = './endChallenge.html'
     }
     else {
@@ -45,8 +43,7 @@ async function userChoiseScissor() {
     let coins = await eel.coinsChallengeMode()()
     document.getElementById("userChoise").textContent = result;
     rounds -= 1
-    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2  || coins == 0 ) 
-    {
+    if ((user_score - computer_score) >= 2 || (computer_score - user_score) >= 2 || coins == 0) {
         window.location.href = './endChallenge.html'
     }
     else {

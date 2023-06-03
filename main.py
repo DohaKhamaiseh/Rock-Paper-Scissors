@@ -23,13 +23,15 @@ nine_user_choice = ""
 nine_computer_choice = ""
 
 
-
+# Camera
 @eel.expose
 def camFun():
     cam = camera.camStart()
     return cam
 
-    
+
+
+# UserName    
 @eel.expose
 def setUserName(name):
     global userName
@@ -47,6 +49,8 @@ def getUserName():
     return userName
 
 
+
+# Rounds
 @eel.expose
 def setRounds(roundsNumber):
     global rounds
@@ -57,6 +61,9 @@ def getRounds():
     global rounds
     return rounds
 
+
+
+# Classic Mode
 @eel.expose
 def mouseClassic(userChoise):
     global user_score, computer_score, rounds
@@ -78,6 +85,8 @@ def mouseClassic(userChoise):
     return result
 
 
+
+# Avatar Mode 
 @eel.expose
 def Avatar(userChoise):
     global user_score, computer_score, rounds
@@ -98,6 +107,9 @@ def Avatar(userChoise):
 
     return result
 
+
+
+# Challenge Mode 
 @eel.expose
 def challenge_mode(user_choice):
     global rounds, userScoreChallengeMode , computerScoreChallengeMode,  playerChoice, computerChoice, coins
@@ -142,22 +154,23 @@ def coinsChallengeMode():
 
 
 
+# Streak Mode 
 @eel.expose
 def Streak_Mode(userChoise):
-    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score , player_choice
+    global userScoreStreakMode, computerScoreStreakMode, history, computerChoiceStreakMode ,computer_score , userChoiceStreakMode , user_score
 
     choices = ["Rock", "Paper", "Scissors"]
-    computer_choice = random.choice(choices)
+    computerChoiceStreakMode = random.choice(choices)
     computerScoreStreakMode = computer_score
     userScoreStreakMode = user_score
-    player_choice = userChoise
+    userChoiceStreakMode = userChoise
 
 
-    if userChoise == computer_choice:
+    if userChoise == computerChoiceStreakMode:
         result = "It's a tie!"
-    elif (userChoise == "Rock" and computer_choice == "Scissors") or \
-            (userChoise == "Paper" and computer_choice == "Rock") or \
-            (userChoise == "Scissors" and computer_choice == "Paper"):
+    elif (userChoise == "Rock" and computerChoiceStreakMode == "Scissors") or \
+            (userChoise == "Paper" and computerChoiceStreakMode == "Rock") or \
+            (userChoise == "Scissors" and computerChoiceStreakMode == "Paper"):
         result = "You win!"
         userScoreStreakMode += 1
     else :
@@ -165,29 +178,39 @@ def Streak_Mode(userChoise):
         computerScoreStreakMode += 1
 
 
-    history.append((userName, userChoise, computer_choice))
+    history.append((userName, userChoise, computerChoiceStreakMode))
 
 
 
     for i, round_data in enumerate(history):
         userChoise = round_data[1]
-        computerChoice = round_data[2]
+        computerChoiceStreakMode = round_data[2]
 
     return result
 
 @eel.expose
-def userScoreStreakMode():
+def userScoreStreak():
     global userScoreStreakMode
-    userScoreStreak = userScoreStreakMode
-    return userScoreStreak
+    return userScoreStreakMode
 
 @eel.expose
-def computerScoreStreakMode():
+def computerScoreStreak():
     global computerScoreStreakMode
-    computerScoreStreak = computerScoreStreakMode
-    return computerScoreStreak
+    return computerScoreStreakMode
+
+@eel.expose
+def computerChoiceStreak():
+    global computerChoiceStreakMode
+    return computerChoiceStreakMode
+
+@eel.expose
+def userChoiceStreak():
+    global userChoiceStreakMode
+    return userChoiceStreakMode
 
 
+
+# Arena Mode 
 @eel.expose
 def arenaMode(userChoice):
     global user_score, computer_score, userChoiceArenaMode, computerChoiceArenaMode
@@ -231,6 +254,8 @@ def computerChoiceArena():
     return computerChoiceArenaMode
 
 
+
+# Nine Cards Mode 
 @eel.expose
 def nineCards_mode(user_choice):
     global rounds, nine_user_score , nine_computer_score , history, nine_user_choice , nine_computer_choice
@@ -294,6 +319,8 @@ def computerChoiceNine():
     return  nine_computer_choice
 
 
+
+# Reverse Mode 
 @eel.expose
 def reversMode(userChoise):
     global user_score, computer_score, rounds, userScoreReverseMode , computerScoreReverseMode , computerChoiceReverseMode
@@ -339,11 +366,3 @@ window_size = {'width': 1600, 'height': 900}  # Adjust the size as desired
 chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height'])]
 
 eel.start('index.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
-
-# eel.start('index.html', mode='chrome', port=8080)
-
-# window_size = {'width': 800, 'height': 600}
-# chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height']),
-#                 '--window-position=0,0', '--start-fullscreen']
-
-# eel.start('index.html', mode='chrome', port=8080, cmdline_args=chrome_flags)
