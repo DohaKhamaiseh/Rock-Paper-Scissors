@@ -18,9 +18,12 @@ header {
 }
 
 .logo img {
-    width: 40px; /* Adjust the width as needed */
-    height: 40px; /* Adjust the height as needed */
-    margin-right: 10px; /* Adjust the spacing as needed */
+    width: 40px;
+    /* Adjust the width as needed */
+    height: 40px;
+    /* Adjust the height as needed */
+    margin-right: 10px;
+    /* Adjust the spacing as needed */
 }
 
 .logo h1 {
@@ -58,4 +61,38 @@ u {
     text-decoration: none;
     border-bottom: 2px solid #fff;
     padding-bottom: 2px;
+}
+
+/* Form styles */
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button#startGame {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#startGame:hover {
+    background-color: #555;
 }
