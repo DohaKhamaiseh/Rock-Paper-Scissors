@@ -78,5 +78,47 @@ def Avatar(userChoise):
 
     return result
 
+@eel.expose
+def challenge_mode(user_choice):
+    global rounds, userScoreChallengeMode , computerScoreChallengeMode,  playerChoice, computerChoice, coins
+    userScoreChallengeMode = user_score
+    computerScoreChallengeMode = computer_score
+
+    choices = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(choices)
+    coins = 10
+    if user_choice == computer_choice:
+        result = "It's a tie!"
+    elif (user_choice == "Rock" and computer_choice == "Scissors") or \
+            (user_choice == "Paper" and computer_choice == "Rock") or \
+            (user_choice == "Scissors" and computer_choice == "Paper"):
+        result = "You win!"
+        userScoreChallengeMode += 1
+        coins += 10  # Increase coins by 10 for winning
+    else:
+        result = "Computer wins!"
+        computerScoreChallengeMode += 1
+        coins -= 10
+    return result
+
+
+@eel.expose
+def userScoreChallengeMode():
+    global userScoreChallengeMode
+    userScoreChallenge = userScoreChallengeMode
+    return userScoreChallenge
+
+@eel.expose
+def computerScoreChallengeMode():
+    global computerScoreChallengeMode
+    computerScoreChallenge = computerScoreChallengeMode
+    return computerScoreChallenge
+
+@eel.expose
+def coinsChallengeMode():
+    global coins
+    coinsChallenge = coins
+    return coinsChallenge
+
 eel.start('index.html', port=8080)
 
