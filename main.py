@@ -8,13 +8,18 @@ eel.init('web')
 rounds = 0
 user_score = 0
 computer_score = 0
+nine_user_score = 0
+nine_computer_score = 0
+rock_count, paper_count, scissors_count = 0, 0, 0
 
 history = []
+computer_choices = ["Rock", "Paper", "Scissors", "Rock", "Paper", "Scissors", "Rock", "Paper", "Scissors"]
 
 userName = ""
 computer_choice = ""
 player_choice = ""
-
+nine_user_choice = ""
+nine_computer_choice = ""
 
 
 @eel.expose
@@ -217,6 +222,68 @@ def computerChoiceArena():
     global computerChoiceArenaMode
     return computerChoiceArenaMode
 
+
+@eel.expose
+def nineCards_mode(user_choice):
+    global rounds, nine_user_score , nine_computer_score , history, nine_user_choice , nine_computer_choice
+
+    computer_choice = random.choice(computer_choices)
+
+    nine_user_choice = user_choice
+    nine_computer_choice = computer_choice
+
+    if user_choice == computer_choice:
+        result = "It's a tie!"
+    elif (user_choice == "Rock" and computer_choice == "Scissors") or \
+            (user_choice == "Paper" and computer_choice == "Rock") or \
+            (user_choice == "Scissors" and computer_choice == "Paper"):
+        result = "You win!"
+        nine_user_score += 1
+    else:
+        result = "Computer wins!"
+        nine_computer_score += 1
+
+    rounds -= 1
+
+    history.append((rounds + 1, user_choice, computer_choice, nine_user_score, nine_computer_score))
+
+    return result
+
+@eel.expose
+def create_rock_button():
+    global rock_count
+    rock_count += 1
+    return rock_count
+
+@eel.expose
+def create_paper_button():
+    global paper_count
+    paper_count += 1
+    return paper_count
+
+@eel.expose
+def create_scissors_button():
+    global scissors_count
+    scissors_count += 1
+    return scissors_count
+
+
+@eel.expose
+def userScoreNine():
+    global  nine_user_score
+    return  nine_user_score
+
+
+@eel.expose
+def computerScoreNine():
+    global nine_computer_score
+    return nine_computer_score
+
+
+@eel.expose
+def computerChoiceNine():
+    global  nine_computer_choice
+    return  nine_computer_choice
 
 
 
