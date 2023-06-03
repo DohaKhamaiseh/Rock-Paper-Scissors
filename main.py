@@ -6,8 +6,9 @@ eel.init('web')
 rounds = 0
 user_score = 0
 computer_score = 0
-
+history = []
 userName = ""
+
 
 
 @eel.expose
@@ -119,6 +120,49 @@ def coinsChallengeMode():
     global coins
     coinsChallenge = coins
     return coinsChallenge
+
+@eel.expose
+def Streak_Mode(userChoise):
+    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score
+
+    choices = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(choices)
+    computerScoreStreakMode = computer_score
+    userScoreStreakMode = user_score
+   
+
+    if userChoise == computer_choice:
+        result = "It's a tie!"
+    elif (userChoise == "Rock" and computer_choice == "Scissors") or \
+            (userChoise == "Paper" and computer_choice == "Rock") or \
+            (userChoise == "Scissors" and computer_choice == "Paper"):
+        result = "You win!"
+        userScoreStreakMode += 1
+    else:
+        result = "Computer wins!"
+        computerScoreStreakMode += 1
+
+    history.append((userName, userChoise, computer_choice))
+
+
+
+    for i, round_data in enumerate(history):
+        userChoise = round_data[1]
+        computerChoice = round_data[2]
+
+    return result
+
+@eel.expose
+def userScoreStreakMode():
+    global userScoreStreakMode
+    userScoreStreak = userScoreStreakMode
+    return userScoreStreak
+
+@eel.expose
+def computerScoreStreakMode():
+    global computerScoreStreakMode
+    computerScoreStreak = computerScoreStreakMode
+    return computerScoreStreak
 
 eel.start('index.html', port=8080)
 
