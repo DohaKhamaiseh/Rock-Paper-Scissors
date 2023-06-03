@@ -1,19 +1,11 @@
-// rounds = 3
-rounds = 1
-
-async function getRounds() {
-    rounds = await eel.getRounds()()
-}
-getRounds()
 
 async function userChoiseRock() {
     const result = await eel.Streak_Mode("Rock")();
     let user_score = await eel.userScoreStreakMode()()
     let computer_score = await eel.computerScoreStreakMode()()
     document.getElementById("userChoise").textContent = result;
-    rounds -= 1
-    
-    if (rounds == 0) {
+    if ((computer_score == 1)){
+
         window.location.href = './endStreak.html'
     }
 
@@ -22,28 +14,33 @@ async function userChoiseRock() {
 }
 
 async function userChoisePaper() {
-    const result = await eel.Streak_Mode("Paper")();
+    const result = await eel.Streak_Mode("Rock")();
     let user_score = await eel.userScoreStreakMode()()
     let computer_score = await eel.computerScoreStreakMode()()
     document.getElementById("userChoise").textContent = result;
-    rounds -= 1
-    if (rounds == 0) {
+
+    if ((computer_score == 1)){
+
         window.location.href = './endStreak.html'
     }
+
+   
     console.log(user_score)
     console.log(computer_score)
 
 }
 
 async function userChoiseScissor() {
-    const result = await eel.Streak_Mode("Scissors")();
+    const result = await eel.Streak_Mode("Rock")();
     let user_score = await eel.userScoreStreakMode()()
     let computer_score = await eel.computerScoreStreakMode()()
     document.getElementById("userChoise").textContent = result;
-    rounds -= 1
-    if (rounds == 0) {
+
+    if ((computer_score == 1)){
+
         window.location.href = './endStreak.html'
     }
+
     console.log(user_score)
     console.log(computer_score)
 }

@@ -8,6 +8,8 @@ user_score = 0
 computer_score = 0
 history = []
 userName = ""
+computer_choice = ""
+player_choice = ""
 
 
 
@@ -123,12 +125,13 @@ def coinsChallengeMode():
 
 @eel.expose
 def Streak_Mode(userChoise):
-    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score
+    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score , player_choice
 
     choices = ["Rock", "Paper", "Scissors"]
     computer_choice = random.choice(choices)
     computerScoreStreakMode = computer_score
     userScoreStreakMode = user_score
+    player_choice = userChoise
    
 
     if userChoise == computer_choice:
@@ -138,9 +141,10 @@ def Streak_Mode(userChoise):
             (userChoise == "Scissors" and computer_choice == "Paper"):
         result = "You win!"
         userScoreStreakMode += 1
-    else:
-        result = "Computer wins!"
+    else :
+        result = "computer win!"
         computerScoreStreakMode += 1
+    
 
     history.append((userName, userChoise, computer_choice))
 
