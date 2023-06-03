@@ -24,7 +24,6 @@ async function userChoisePaper() {
         window.location.href = './endStreak.html'
     }
 
-   
     console.log(user_score)
     console.log(computer_score)
 
