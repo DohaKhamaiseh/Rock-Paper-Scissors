@@ -1,13 +1,20 @@
 import eel
 import random
 
+
 eel.init('web')
+
 
 rounds = 0
 user_score = 0
 computer_score = 0
 
+history = []
+
 userName = ""
+computer_choice = ""
+player_choice = ""
+
 
 
 @eel.expose
@@ -120,5 +127,109 @@ def coinsChallengeMode():
     coinsChallenge = coins
     return coinsChallenge
 
-eel.start('index.html', port=8080)
 
+
+@eel.expose
+def Streak_Mode(userChoise):
+    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score , player_choice
+
+    choices = ["Rock", "Paper", "Scissors"]
+    computer_choice = random.choice(choices)
+    computerScoreStreakMode = computer_score
+    userScoreStreakMode = user_score
+    player_choice = userChoise
+
+
+    if userChoise == computer_choice:
+        result = "It's a tie!"
+    elif (userChoise == "Rock" and computer_choice == "Scissors") or \
+            (userChoise == "Paper" and computer_choice == "Rock") or \
+            (userChoise == "Scissors" and computer_choice == "Paper"):
+        result = "You win!"
+        userScoreStreakMode += 1
+    else :
+        result = "computer win!"
+        computerScoreStreakMode += 1
+
+
+    history.append((userName, userChoise, computer_choice))
+
+
+
+    for i, round_data in enumerate(history):
+        userChoise = round_data[1]
+        computerChoice = round_data[2]
+
+    return result
+
+@eel.expose
+def userScoreStreakMode():
+    global userScoreStreakMode
+    userScoreStreak = userScoreStreakMode
+    return userScoreStreak
+
+@eel.expose
+def computerScoreStreakMode():
+    global computerScoreStreakMode
+    computerScoreStreak = computerScoreStreakMode
+    return computerScoreStreak
+
+
+@eel.expose
+def arenaMode(userChoice):
+    global user_score, computer_score, userChoiceArenaMode, computerChoiceArenaMode
+    userScoreArenaMode=user_score
+    computerScoreArenaMode= computer_score
+    userChoiceArenaMode= userChoice
+
+    choices = ["Rock", "Paper", "Scissors"]
+    computerChoiceArenaMode = random.choice(choices)
+    if userChoiceArenaMode == computerChoiceArenaMode:
+        result = "It's a tie!"
+    elif (userChoiceArenaMode == "Rock" and computerChoiceArenaMode == "Scissors") or \
+        (userChoiceArenaMode == "Paper" and computerChoiceArenaMode == "Rock") or \
+        (userChoiceArenaMode == "Scissors" and computerChoiceArenaMode == "Paper"):
+        result = "You win!"
+        userScoreArenaMode += 1
+    else:
+        result = "Computer wins!"
+        computerScoreArenaMode += 1
+
+    return result
+
+@eel.expose
+def userScoreArena():
+    global userScoreArenaMode
+    return userScoreArenaMode
+
+@eel.expose
+def computerScoreArena():
+    global computerScoreArenaMode
+    return computerScoreArenaMode
+
+@eel.expose
+def userChoiceArena():
+    global userChoiceArenaMode
+    return userChoiceArenaMode
+
+@eel.expose
+def computerChoiceArena():
+    global computerChoiceArenaMode
+    return computerChoiceArenaMode
+
+
+
+
+# Set the window size and position
+window_size = {'width': 1600, 'height': 900}  # Adjust the size as desired
+chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height'])]
+
+eel.start('index.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
+
+# eel.start('index.html', mode='chrome', port=8080)
+
+# window_size = {'width': 800, 'height': 600}
+# chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height']),
+#                 '--window-position=0,0', '--start-fullscreen']
+
+# eel.start('index.html', mode='chrome', port=8080, cmdline_args=chrome_flags)
