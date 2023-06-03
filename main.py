@@ -1,6 +1,6 @@
 import eel
 import random
-
+import Cam.cam as camera
 
 eel.init('web')
 
@@ -20,6 +20,12 @@ computer_choice = ""
 player_choice = ""
 nine_user_choice = ""
 nine_computer_choice = ""
+
+@eel.expose
+def camFun():
+    cam = camera.camStart()
+    return cam
+
 
 
 @eel.expose
