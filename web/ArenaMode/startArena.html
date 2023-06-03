@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -15,19 +15,21 @@
         <h1>Rock Paper Scissors</h1>
     </header>
 
-    <main>
-        <h2>arena game logic</h2>
-        <button onclick="window.location.href = './arenaMode.html';">Return</button>
-    </main>
+    <button id="btnRock">Rock</button>
+    <button id="btnPaper">Paper</button>
+    <button id="btnScissor">Scissors</button>
 
 
-    <footer class="indexfooter">
+    <h3 id="whatUserPlayed"></h3>
+    <h3 id="whatComputerPlayed"></h3>
+    <h3 id="roundResult" style="display: none;"></h3>
+    <h3>User Score: <span id="userScore">0</span></h3>
+    <h3>Computer Score: <span id="computerScore">0</span></h3>
+    <h3 id="userChoice"></h3>
 
-    </footer>
+    <button onclick="window.location.href = './arenaMode.html';">Return</button>
 
     <script src="arena.js"></script>
-
-
 </body>
 
 </html>
