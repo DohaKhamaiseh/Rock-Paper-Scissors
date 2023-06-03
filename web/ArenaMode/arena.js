@@ -13,6 +13,7 @@ async function userChoiceRock() {
     if (result === "You win!") {
         userScore += 1;
         document.getElementById("userScore").textContent = userScore;
+        document.getElementById("userName").textContent = userName;
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = computerScore;
@@ -31,9 +32,11 @@ async function userChoicePaper() {
     if (result === "You win!") {
         userScore += 1;
         document.getElementById("userScore").textContent = userScore;
+        document.getElementById("userName").textContent = userName;
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = computerScore;
+       
     }
 }
 
@@ -49,6 +52,7 @@ async function userChoiceScissor() {
     if (result === "You win!") {
         userScore += 1;
         document.getElementById("userScore").textContent = userScore;
+        document.getElementById("userName").textContent = userName;
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = computerScore;

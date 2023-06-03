@@ -1,42 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <script src="/eel.js"></script>
-    <link rel="stylesheet" href="styles.css">
-</head>
-
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <script src="/eel.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 <body>
     <header>
         <h1>Rock Paper Scissors</h1>
     </header>
-
-    <main>
-        <h2>Streak game logic</h2>
-
-
-        <button id="btnRock">Rock</button>
-        <button id="btnPaper">Paper</button>
-        <button id="btnScissor">Scissors</button>
-
-        <h3 id="userChoise"></h3>
-
-        <button onclick="window.location.href = './streakMode.html';">Return</button>
-
-    </main>
+    
+    <button id="btnRock">Rock</button>
+    <button id="btnPaper">Paper</button>
+    <button id="btnScissor">Scissors</button>
 
 
-    <footer class="indexfooter">
+    <h3 id="whatUserPlayed"></h3>
+    <h3 id="whatComputerPlayed"></h3>
+    <h3 id="roundResult" style="display: none;"></h3>
+    <h3><span id = "userName">user</span> Score: <span id="user_score">0</span></h3>
+    <!-- <h3 id="userChoise"></h3> -->
 
-    </footer>
+    <button onclick="window.location.href = './streakMode.html';">Return</button>
 
     <script src="streak.js"></script>
-
-
 </body>
-
 </html>

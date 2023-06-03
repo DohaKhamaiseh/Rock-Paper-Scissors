@@ -136,20 +136,20 @@ def coinsChallengeMode():
 
 @eel.expose
 def Streak_Mode(userChoise):
-    global userScoreStreakMode, computerScoreStreakMode, history, computerChoice ,computer_score , player_choice
+    global userScoreStreakMode, computerScoreStreakMode, history, computerChoiceStreakMode ,computer_score , userChoiceStreakMode , user_score
 
     choices = ["Rock", "Paper", "Scissors"]
-    computer_choice = random.choice(choices)
+    computerChoiceStreakMode = random.choice(choices)
     computerScoreStreakMode = computer_score
     userScoreStreakMode = user_score
-    player_choice = userChoise
+    userChoiceStreakMode = userChoise
 
 
-    if userChoise == computer_choice:
+    if userChoise == computerChoiceStreakMode:
         result = "It's a tie!"
-    elif (userChoise == "Rock" and computer_choice == "Scissors") or \
-            (userChoise == "Paper" and computer_choice == "Rock") or \
-            (userChoise == "Scissors" and computer_choice == "Paper"):
+    elif (userChoise == "Rock" and computerChoiceStreakMode == "Scissors") or \
+            (userChoise == "Paper" and computerChoiceStreakMode == "Rock") or \
+            (userChoise == "Scissors" and computerChoiceStreakMode == "Paper"):
         result = "You win!"
         userScoreStreakMode += 1
     else :
@@ -157,27 +157,35 @@ def Streak_Mode(userChoise):
         computerScoreStreakMode += 1
 
 
-    history.append((userName, userChoise, computer_choice))
+    history.append((userName, userChoise, computerChoiceStreakMode))
 
 
 
     for i, round_data in enumerate(history):
         userChoise = round_data[1]
-        computerChoice = round_data[2]
+        computerChoiceStreakMode = round_data[2]
 
     return result
 
 @eel.expose
-def userScoreStreakMode():
+def userScoreStreak():
     global userScoreStreakMode
-    userScoreStreak = userScoreStreakMode
-    return userScoreStreak
+    return userScoreStreakMode
 
 @eel.expose
-def computerScoreStreakMode():
+def computerScoreStreak():
     global computerScoreStreakMode
-    computerScoreStreak = computerScoreStreakMode
-    return computerScoreStreak
+    return computerScoreStreakMode
+
+@eel.expose
+def computerChoiceStreak():
+    global computerChoiceStreakMode
+    return computerChoiceStreakMode
+
+@eel.expose
+def userChoiceStreak():
+    global userChoiceStreakMode
+    return userChoiceStreakMode
 
 
 @eel.expose
