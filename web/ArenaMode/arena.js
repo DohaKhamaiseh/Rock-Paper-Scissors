@@ -4,7 +4,8 @@ let computerScore = 0;
 async function userChoiceRock() {
     const result = await eel.arenaMode("Rock")();
     const computerChoice = await eel.computerChoiceArena()();
-    document.getElementById("whatUserPlayed").textContent = "The User played Rock";
+    const userName = await eel.getUserName()();
+    document.getElementById("whatUserPlayed").textContent = userName + " played Rock";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
@@ -21,7 +22,8 @@ async function userChoiceRock() {
 async function userChoicePaper() {
     const result = await eel.arenaMode("Paper")();
     const computerChoice = await eel.computerChoiceArena()();
-    document.getElementById("whatUserPlayed").textContent = "The User played Paper";
+    const userName = await eel.getUserName()();
+    document.getElementById("whatUserPlayed").textContent = userName + " played Paper";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
@@ -38,7 +40,8 @@ async function userChoicePaper() {
 async function userChoiceScissor() {
     const result = await eel.arenaMode("Scissors")();
     const computerChoice = await eel.computerChoiceArena()();
-    document.getElementById("whatUserPlayed").textContent = "The User played Scissors";
+    const userName = await eel.getUserName()();
+    document.getElementById("whatUserPlayed").textContent = userName + " played Scissors";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
