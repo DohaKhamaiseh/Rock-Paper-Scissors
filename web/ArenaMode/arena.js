@@ -58,3 +58,5 @@ async function userChoiceScissor() {
 document.getElementById("btnRock").onclick = userChoiceRock;
 document.getElementById("btnPaper").onclick = userChoicePaper;
 document.getElementById("btnScissor").onclick = userChoiceScissor;
+
+//Take it easy bro.
