@@ -16,16 +16,16 @@ async function userChoiseRock() {
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
-    document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
-    document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
+    document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
 
 
     if (result === "You win!") {
         userScore += 1;
-        document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
+        document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     } else if (result === "Computer wins!") {
         computerScore += 1;
-        document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
+        document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
 
     rounds -= 1
@@ -44,16 +44,16 @@ async function userChoisePaper() {
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
-    document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
-    document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
+    document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
 
 
     if (result === "You win!") {
         userScore += 1;
-        document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
+        document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     } else if (result === "Computer wins!") {
         computerScore += 1;
-        document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
+        document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
 
     rounds -= 1
@@ -63,31 +63,31 @@ async function userChoisePaper() {
 }
 
 async function userChoiseScissor() {
-        const result = await eel.reversMode("Scissors")();
-        const computerChoice = await eel.computerChoiceReverse()();
-        const userName = await eel.getUserName()();
-        document.getElementById("whatUserPlayed").textContent = userName + " played Scissors";
-        document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
-        document.getElementById("roundResult").textContent = result;
-        document.getElementById("roundResult").style.display = "block";
-        document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
-        document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
+    const result = await eel.reversMode("Scissors")();
+    const computerChoice = await eel.computerChoiceReverse()();
+    const userName = await eel.getUserName()();
+    document.getElementById("whatUserPlayed").textContent = userName + " played Scissors";
+    document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
+    document.getElementById("roundResult").textContent = result;
+    document.getElementById("roundResult").style.display = "block";
+    document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
 
-        if (result === "You win!") {  
-            userScore += 1;
-            document.getElementById("userScore").textContent = userName +  " Score:" + userScore;
-        } else if (result === "Computer wins!") {
+    if (result === "You win!") {
+        userScore += 1;
+        document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    } else if (result === "Computer wins!") {
 
-            computerScore += 1;
-            document.getElementById("computerScore").textContent = "Computer Score: "+computerScore;
-        }
-
-        rounds -= 1
-        if (rounds == 0) {
-
-            window.location.href = './endReverse.html'
-        }
+        computerScore += 1;
+        document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
+
+    rounds -= 1
+    if (rounds == 0) {
+
+        window.location.href = './endReverse.html'
+    }
+}
 
 document.getElementById("btnRock").onclick = userChoiseRock;
 document.getElementById("btnPaper").onclick = userChoisePaper;

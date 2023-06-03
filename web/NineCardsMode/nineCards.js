@@ -18,16 +18,16 @@ async function userChoiseRock() {
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
-    document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+    document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
-    
+
     if (rock_count >= 3) {
         document.getElementById("btnRock").disabled = true;
     }
 
     if (result === "You win!") {
         userScore += 1;
-        document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+        document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
@@ -47,7 +47,7 @@ async function userChoisePaper() {
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
-    document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+    document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
 
     if (paper_count >= 3) {
@@ -56,7 +56,7 @@ async function userChoisePaper() {
 
     if (result === "You win!") {
         userScore += 1;
-        document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+        document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
@@ -76,7 +76,7 @@ async function userChoiseScissor() {
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
-    document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+    document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
 
     if (scissor_count >= 3) {
@@ -85,7 +85,7 @@ async function userChoiseScissor() {
 
     if (result === "You win!") {
         userScore += 1;
-        document.getElementById("userScore").textContent =  user_name  +" Score: " + userScore;
+        document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
 
     } else if (result === "Computer wins!") {
         computerScore += 1;
