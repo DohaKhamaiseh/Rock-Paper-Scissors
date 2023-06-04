@@ -7,9 +7,16 @@
 
 /* Header styles */
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px;
+}
+
+body {
+    background-image: url("./Assets/BG2.png"); /* Replace with the path to your image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex; */
 }
 
 .logo {
