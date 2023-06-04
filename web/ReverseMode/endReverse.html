@@ -17,9 +17,11 @@
 
     <main>
         <h2>Game Over</h2>
-        <h3 id="finalResult"></h3>
+        <!-- <h3 id="finalResult"></h3>
         <h3 id="finalUserScore"></h3>
-        <h3 id="finalComputerScore"></h3>
+        <h3 id="finalComputerScore"></h3> -->
+
+        <h3><span id="result">result</span></h3>
 
         <button onclick="window.location.href = './reverseMode.html';">Play Again</button>
         <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
@@ -29,6 +31,14 @@
     <footer class="indexfooter">
 
     </footer>
+
+    <script>
+  
+        const result = localStorage.getItem("result");
+
+        document.getElementById("result").textContent = result;
+
+    </script>
 
     <script src="reverse.js"></script>
 

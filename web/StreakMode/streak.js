@@ -15,6 +15,7 @@ async function userChoiseRock() {
 
 
     if (result === "You win!") {
+        
         total_user_score += user_score
         document.getElementById("user_score").textContent = total_user_score;
         document.getElementById("userName").textContent = userName;
@@ -22,12 +23,16 @@ async function userChoiseRock() {
 
 
     else if ((computer_score == 1)) {
+        localStorage.setItem("userName", userName);
+        localStorage.setItem("userScore", total_user_score);
+        
 
         window.location.href = './endStreak.html'
+
+        
     }
 
-    console.log(user_score)
-    console.log(computer_score)
+   
 }
 
 async function userChoisePaper() {
@@ -55,8 +60,6 @@ async function userChoisePaper() {
         window.location.href = './endStreak.html'
     }
 
-    console.log(user_score)
-    console.log(computer_score)
 }
 
 async function userChoiseScissor() {
@@ -84,8 +87,7 @@ async function userChoiseScissor() {
         window.location.href = './endStreak.html'
     }
 
-    console.log(user_score)
-    console.log(computer_score)
+
 }
 
 document.getElementById("btnRock").onclick = userChoiseRock;
