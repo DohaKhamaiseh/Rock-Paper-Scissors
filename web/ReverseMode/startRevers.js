@@ -63,6 +63,14 @@ async function userChoisePaper() {
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     document.getElementById("roundCounter").textContent = (rounds - 1) + " Round left";
 
+    if (result === "You win!") {
+        userScore += 1;
+        document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    } else if (result === "Computer wins!") {
+        computerScore += 1;
+        document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
+    }
+
     rounds -= 1
     if (rounds == 0) {
         if (userScore > computerScore){
@@ -93,6 +101,14 @@ async function userChoiseScissor() {
     document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     document.getElementById("roundCounter").textContent = (rounds - 1) + " Round left";
+
+    if (result === "You win!") {
+        userScore += 1;
+        document.getElementById("userScore").textContent = userName + " Score:" + userScore;
+    } else if (result === "Computer wins!") {
+        computerScore += 1;
+        document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
+    }
 
     rounds -= 1
     if (rounds == 0) {
