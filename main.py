@@ -112,25 +112,56 @@ def computerChoiceClassic():
 
 
 # Avatar Mode 
+# Avatar Mode 
 @eel.expose
 def Avatar(userChoise):
-    global user_score, computer_score, rounds
+    global user_score, computer_score, userScoreAvatar, computerScoreAvatar, rounds, computerChoiceAvatar , userChoiceAvatar
     choices = ["Fire", "Water", "Wind", "Earth"]
     computer_choice = random.choice(choices)
 
-    if userChoise == computer_choice:
+    computerChoiceAvatar = computer_choice
+    userChoiceAvatar = userChoise
+     
+
+    # user_score = 0
+    # computer_score = 0
+    
+    userScoreAvatar = user_score 
+    computerScoreAvatar = computer_score
+
+    if userChoiceAvatar == computerChoiceAvatar:
         result = "It's a tie!"
-    elif (userChoise == "Earth" and computer_choice == "Water") or \
-            (userChoise == "Water" and computer_choice == "Fire") or \
-            (userChoise == "Fire" and computer_choice == "Wind") or \
-            (userChoise == "Wind" and computer_choice == "Earth"):
+    elif (userChoiceAvatar == "Earth" and computerChoiceAvatar == "Water") or \
+            (userChoiceAvatar == "Water" and computerChoiceAvatar == "Fire") or \
+            (userChoiceAvatar == "Fire" and computerChoiceAvatar == "Wind") or \
+            (userChoiceAvatar == "Wind" and computerChoiceAvatar == "Earth"):
         result = "You win!"
-        user_score += 1
+        userScoreAvatar += 1
     else:
         result = "Computer wins!"
-        computer_score += 1
+        computerScoreAvatar += 1
 
     return result
+
+@eel.expose
+def userScoreAvatarMode():
+    global userScoreAvatar
+    return userScoreAvatar
+
+@eel.expose
+def computerScoreAvatarMode():
+    global computerScoreAvatar
+    return computerScoreAvatar
+
+@eel.expose
+def computerChoiceAvatarMode():
+    global computerChoiceAvatar
+    return computerChoiceAvatar
+
+@eel.expose
+def userChoiceAvatarMode():
+    global userChoiceAvatar
+    return userChoiceAvatar
 
 
 
