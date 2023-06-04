@@ -1,4 +1,4 @@
-rounds = document.getElementById("rounds")
+rounds = document.getElementById("round")
 startBtn = document.getElementById("startBtn")
 startBtn.onclick = startGame
 

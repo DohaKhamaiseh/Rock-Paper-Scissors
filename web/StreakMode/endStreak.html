@@ -22,7 +22,9 @@
 
         <h3 id="userChoise"></h3>
 
+
         <h3><span id="userName"></span> Score: <span id="user_score"></span></h3>
+
 
         <button onclick="window.location.href = './startStreak.html';">Play Again</button>
         <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
@@ -30,15 +32,24 @@
 
     <footer class="indexfooter"></footer>
 
-    <script>
-     
+    <footer class="indexfooter">
+
+    </footer>
+
+        <script>
+
         const userName = localStorage.getItem("userName");
         const userScore = localStorage.getItem("userScore");
+
+
+        document.getElementById("userName").textContent = userName;
+        document.getElementById("user_score").textContent = userScore;
+    </script>
+
 
      
         document.getElementById("userName").textContent = userName;
         document.getElementById("user_score").textContent = userScore;
     </script>
 </body>
-
 </html>

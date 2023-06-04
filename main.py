@@ -23,12 +23,12 @@ nine_user_choice = ""
 nine_computer_choice = ""
 
 
+
 # Camera
 @eel.expose
 def camFun():
     cam = camera.camStart()
     return cam
-
 
 
 # UserName    
@@ -47,7 +47,6 @@ def setUserName(name):
 def getUserName():
     global userName
     return userName
-
 
 
 # Rounds
@@ -94,15 +93,18 @@ def userScoreClassic():
     global userScoreClassicMode
     return userScoreClassicMode
 
+
 @eel.expose
 def computerScoreClassic():
     global computerScoreClassicMode
     return computerScoreClassicMode
 
+
 @eel.expose
 def userChoiceClassic():
     global userChoiceClassicMode
     return userChoiceClassicMode
+
 
 @eel.expose
 def computerChoiceClassic():
@@ -114,23 +116,53 @@ def computerChoiceClassic():
 # Avatar Mode 
 @eel.expose
 def Avatar(userChoise):
-    global user_score, computer_score, rounds
+    global user_score, computer_score, userScoreAvatar, computerScoreAvatar, rounds, computerChoiceAvatar , userChoiceAvatar
     choices = ["Fire", "Water", "Wind", "Earth"]
     computer_choice = random.choice(choices)
 
-    if userChoise == computer_choice:
+    computerChoiceAvatar = computer_choice
+    userChoiceAvatar = userChoise
+
+    userScoreAvatar = user_score 
+    computerScoreAvatar = computer_score
+
+    if userChoiceAvatar == computerChoiceAvatar:
         result = "It's a tie!"
-    elif (userChoise == "Earth" and computer_choice == "Water") or \
-            (userChoise == "Water" and computer_choice == "Fire") or \
-            (userChoise == "Fire" and computer_choice == "Wind") or \
-            (userChoise == "Wind" and computer_choice == "Earth"):
+    elif (userChoiceAvatar == "Earth" and computerChoiceAvatar == "Water") or \
+            (userChoiceAvatar == "Water" and computerChoiceAvatar == "Fire") or \
+            (userChoiceAvatar == "Fire" and computerChoiceAvatar == "Wind") or \
+            (userChoiceAvatar == "Wind" and computerChoiceAvatar == "Earth"):
         result = "You win!"
         user_score += 1
     else:
         result = "Computer wins!"
-        computer_score += 1
+        computerScoreAvatar += 1
 
     return result
+
+
+@eel.expose
+def userScoreAvatarMode():
+    global userScoreAvatar
+    return userScoreAvatar
+
+
+@eel.expose
+def computerScoreAvatarMode():
+    global computerScoreAvatar
+    return computerScoreAvatar
+
+
+@eel.expose
+def computerChoiceAvatarMode():
+    global computerChoiceAvatar
+    return computerChoiceAvatar
+
+
+@eel.expose
+def userChoiceAvatarMode():
+    global userChoiceAvatar
+    return userChoiceAvatar
 
 
 
@@ -160,10 +192,17 @@ def challenge_mode(user_choice):
 
 
 @eel.expose
+def computerChoiceChallenge():
+    global computerChoiceChallengeMode
+    return computerChoiceChallengeMode
+
+
+@eel.expose
 def userScoreChallengeMode():
     global userScoreChallengeMode
     userScoreChallenge = userScoreChallengeMode
     return userScoreChallenge
+
 
 @eel.expose
 def computerScoreChallengeMode():
@@ -171,16 +210,12 @@ def computerScoreChallengeMode():
     computerScoreChallenge = computerScoreChallengeMode
     return computerScoreChallenge
 
+
 @eel.expose
 def coinsChallengeMode():
     global coins
     coinsChallenge = coins
     return coinsChallenge
-
-@eel.expose
-def computerChoiceChallenge():
-    global computerChoiceChallengeMode
-    return computerChoiceChallengeMode
 
 
 
@@ -218,20 +253,24 @@ def Streak_Mode(userChoise):
 
     return result
 
+
 @eel.expose
 def userScoreStreak():
     global userScoreStreakMode
     return userScoreStreakMode
+
 
 @eel.expose
 def computerScoreStreak():
     global computerScoreStreakMode
     return computerScoreStreakMode
 
+
 @eel.expose
 def computerChoiceStreak():
     global computerChoiceStreakMode
     return computerChoiceStreakMode
+
 
 @eel.expose
 def userChoiceStreak():
@@ -263,20 +302,24 @@ def arenaMode(userChoice):
 
     return result
 
+
 @eel.expose
 def userScoreArena():
     global userScoreArenaMode
     return userScoreArenaMode
+
 
 @eel.expose
 def computerScoreArena():
     global computerScoreArenaMode
     return computerScoreArenaMode
 
+
 @eel.expose
 def userChoiceArena():
     global userChoiceArenaMode
     return userChoiceArenaMode
+
 
 @eel.expose
 def computerChoiceArena():
@@ -312,17 +355,20 @@ def nineCards_mode(user_choice):
 
     return result
 
+
 @eel.expose
 def create_rock_button():
     global rock_count
     rock_count += 1
     return rock_count
 
+
 @eel.expose
 def create_paper_button():
     global paper_count
     paper_count += 1
     return paper_count
+
 
 @eel.expose
 def create_scissors_button():
@@ -373,10 +419,12 @@ def reversMode(userChoise):
 
     return result
 
+
 @eel.expose
 def userScoreReverse():
     global userScoreReverseMode
     return userScoreReverseMode
+
 
 @eel.expose
 def computerScoreReverse():
@@ -395,4 +443,4 @@ def computerChoiceReverse():
 window_size = {'width': 1600, 'height': 900}  # Adjust the size as desired
 chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height'])]
 
-eel.start('index.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
+eel.start('start.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
