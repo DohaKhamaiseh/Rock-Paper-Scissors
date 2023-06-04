@@ -66,23 +66,48 @@ def getRounds():
 # Classic Mode
 @eel.expose
 def mouseClassic(userChoise):
-    global user_score, computer_score, rounds
-    
-    choices = ["Rock", "Paper", "Scissors"]
-    computerChoice = random.choice(choices)
+    global user_score, computer_score, rounds, userChoiceClassicMode,classicRounds,computerChoiceclassicMode, userScoreClassicMode, computerScoreClassicMode
+    classicRounds=rounds
+    userScoreClassicMode=user_score
+    computerScoreClassicMode=computer_score
+    userChoiceClassicMode= userChoise
 
-    if userChoise == computerChoice:
+    choices = ["Rock", "Paper", "Scissors"]
+    computerChoiceclassicMode = random.choice(choices)
+
+    if userChoiceClassicMode == computerChoiceclassicMode:
         result = "It's a tie!"
-    elif (userChoise == "Rock" and computerChoice == "Scissors") or \
-        (userChoise == "Paper" and computerChoice == "Rock") or \
-        (userChoise == "Scissors" and computerChoice == "Paper"):
+    elif (userChoiceClassicMode == "Rock" and computerChoiceclassicMode == "Scissors") or \
+        (userChoiceClassicMode == "Paper" and computerChoiceclassicMode == "Rock") or \
+        (userChoiceClassicMode == "Scissors" and computerChoiceclassicMode == "Paper"):
         result = "You win!"
-        user_score += 1
+        computerScoreClassicMode += 1
     else:
         result = "Computer wins!"
-        computer_score += 1
+        computerScoreClassicMode += 1
 
     return result
+
+
+@eel.expose
+def userScoreClassic():
+    global userScoreClassicMode
+    return userScoreClassicMode
+
+@eel.expose
+def computerScoreClassic():
+    global computerScoreClassicMode
+    return computerScoreClassicMode
+
+@eel.expose
+def userChoiceClassic():
+    global userChoiceClassicMode
+    return userChoiceClassicMode
+
+@eel.expose
+def computerChoiceClassic():
+    global computerChoiceclassicMode
+    return computerChoiceclassicMode
 
 
 
@@ -155,6 +180,11 @@ def coinsChallengeMode():
     global coins
     coinsChallenge = coins
     return coinsChallenge
+
+@eel.expose
+def computerChoiceChallenge():
+    global computerChoiceChallengeMode
+    return computerChoiceChallengeMode
 
 
 
