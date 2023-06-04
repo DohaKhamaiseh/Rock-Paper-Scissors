@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game Start Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    #video-background {
+      position: fixed;
+      right: 0;
+      bottom: -60%; /* Adjust the value to move the video further down */
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+    }
+
+    #content {
+      position: absolute;
+      top: 80%;
+      left: 80%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    #timer {
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <video id="video-background" src="Assets/RPS-logo.mp4" autoplay loop muted></video>
+
+
+  <div id="timer"><span id="countdown"></span></div>
+
+  <script>
+    var countdown = 3; // Set the initial countdown time in seconds
+
+    // Function to update the timer and redirect to the game page when it reaches 0
+    function updateTimer() {
+      var countdownElement = document.getElementById("countdown");
+      // countdownElement.textContent = countdown;
+      if (countdown === 0) {
+        // Redirect to the game page
+        window.location.href = "index.html";
+      } else {
+        countdown--;
+        setTimeout(updateTimer, 1000); // Update the timer every second (1000 milliseconds)
+      }
+    }
+
+    updateTimer(); // Start the timer when the page loads
+  </script>
+</body>
+</html>
+
+
