@@ -175,9 +175,10 @@ def challenge_mode(user_choice):
 
     choices = ["Rock", "Paper", "Scissors"]
     computerChoiceChallengeMode = random.choice(choices)
-    coins = 10
+    coins = 0
     if user_choice == computerChoiceChallengeMode:
         result = "It's a tie!"
+        coins -= 10
     elif (user_choice == "Rock" and computerChoiceChallengeMode == "Scissors") or \
             (user_choice == "Paper" and computerChoiceChallengeMode == "Rock") or \
             (user_choice == "Scissors" and computerChoiceChallengeMode == "Paper"):
