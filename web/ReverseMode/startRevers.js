@@ -18,7 +18,7 @@ async function userChoiseRock() {
     document.getElementById("roundResult").style.display = "block";
     document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
-
+    document.getElementById("roundCounter").textContent = (rounds - 1) + " Round left";
 
     if (result === "You win!") {
         userScore += 1;
@@ -46,7 +46,7 @@ async function userChoisePaper() {
     document.getElementById("roundResult").style.display = "block";
     document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
-
+    document.getElementById("roundCounter").textContent = (rounds - 1) + " Round left";
 
     if (result === "You win!") {
         userScore += 1;
@@ -72,6 +72,7 @@ async function userChoiseScissor() {
     document.getElementById("roundResult").style.display = "block";
     document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
+    document.getElementById("roundCounter").textContent = (rounds - 1) + " Round left";
 
     if (result === "You win!") {
         userScore += 1;
