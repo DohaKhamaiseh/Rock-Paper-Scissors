@@ -1,6 +1,6 @@
 import eel
 import random
-import Cam.cam as camera
+# import Cam.cam as camera
 
 
 eel.init('web')

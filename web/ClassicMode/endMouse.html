@@ -18,25 +18,27 @@
     <main>
         <h2>Game Over</h2>
 
-
-
         <h3 id="userChoise"></h3>
+        <h2 id="result"></h2> 
+
 
         <button onclick="window.location.href = './classicMouse.html';">Play Again</button>
+        <br> <br>
 
-        <h3 id="result"></h3>
-        
         <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
     </main>
-
 
     <footer class="indexfooter">
 
     </footer>
 
     <script src="endMouse.js"></script>
-
-
+    <script>
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get('result');
+        document.getElementById("result").textContent = result;
+    </script>
 </body>
 
 </html>
