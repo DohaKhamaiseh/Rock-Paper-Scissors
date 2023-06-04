@@ -13,7 +13,6 @@ async function userChoiseRock() {
     const user_name = await eel.getUserName()();
     computerChoice = await eel.computerChoiceNine()();
 
-    document.getElementById("userChoise").textContent = result;
     document.getElementById("whatUserPlayed").textContent = user_name + " played Rock";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
@@ -42,7 +41,6 @@ async function userChoisePaper() {
     const user_name = await eel.getUserName()();
     computerChoice = await eel.computerChoiceNine()();
 
-    document.getElementById("userChoise").textContent = result;
     document.getElementById("whatUserPlayed").textContent = user_name + " played Paper";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
@@ -71,7 +69,6 @@ async function userChoiseScissor() {
     const user_name = await eel.getUserName()();
     computerChoice = await eel.computerChoiceNine()();
 
-    document.getElementById("userChoise").textContent = result;
     document.getElementById("whatUserPlayed").textContent = user_name + " played Scissors";
     document.getElementById("whatComputerPlayed").textContent = "The Computer played " + computerChoice;
     document.getElementById("roundResult").textContent = result;
