@@ -181,12 +181,6 @@ def coinsChallengeMode():
     coinsChallenge = coins
     return coinsChallenge
 
-@eel.expose
-def computerChoiceChallenge():
-    global computerChoiceChallengeMode
-    return computerChoiceChallengeMode
-
-
 
 # Streak Mode 
 @eel.expose
@@ -399,4 +393,4 @@ def computerChoiceReverse():
 window_size = {'width': 1600, 'height': 900}  # Adjust the size as desired
 chrome_flags = ['--window-size={},{}'.format(window_size['width'], window_size['height'])]
 
-eel.start('index.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
+eel.start('start.html', mode='chrome', port=8000, cmdline_args=chrome_flags)
