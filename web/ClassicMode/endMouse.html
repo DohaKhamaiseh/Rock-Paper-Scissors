@@ -21,6 +21,7 @@
 
 
         <h3 id="userChoise"></h3>
+        <h2 id="result"></h2> 
 
         <button onclick="window.location.href = './classicMouse.html';">Play Again</button>
 
@@ -34,7 +35,11 @@
 
     </footer>
 
-    <script src="endMouse.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get('result');
+        document.getElementById("result").textContent = result;
+    </script>
 
 
 </body>

@@ -4,6 +4,7 @@ let paper_count = 0;
 let scissor_count = 0;
 let userScore = 0;
 let computerScore = 0;
+let roundResults = [];
 
 async function userChoiseRock() {
     const result = await eel.nineCards_mode("Rock")();
@@ -31,6 +32,10 @@ async function userChoiseRock() {
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
+
+    roundResults.push(result);
+
+    checkOverallResult();
 }
 
 async function userChoisePaper() {
@@ -59,6 +64,10 @@ async function userChoisePaper() {
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
+
+    roundResults.push(result);
+
+    checkOverallResult();
 }
 
 async function userChoiseScissor() {
@@ -83,10 +92,40 @@ async function userChoiseScissor() {
     if (result === "You win!") {
         userScore += 1;
         document.getElementById("userScore").textContent = user_name + " Score: " + userScore;
-
     } else if (result === "Computer wins!") {
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
+    }
+
+    roundResults.push(result);
+
+    checkOverallResult();
+}
+
+function checkOverallResult() {
+    if (
+        document.getElementById("btnRock").disabled &&
+        document.getElementById("btnPaper").disabled &&
+        document.getElementById("btnScissor").disabled
+    ) {
+        const totalResult = calculateTotalResult();
+        setTimeout(() => {
+            window.location.href = `./endNineCards.html?result=${encodeURIComponent(totalResult)}`;
+        }, 0);
+    }
+}
+
+function calculateTotalResult() {
+    const userWins = roundResults.filter(result => result === "You win!").length;
+    const computerWins = roundResults.filter(result => result === "Computer wins!").length;
+    const ties = roundResults.filter(result => result === "It's a tie!").length;
+
+    if (userWins > computerWins) {
+        return "Overall Result: You win!";
+    } else if (userWins < computerWins) {
+        return "Overall Result: Computer wins!";
+    } else {
+        return "Overall Result: It's a tie!";
     }
 }
 
