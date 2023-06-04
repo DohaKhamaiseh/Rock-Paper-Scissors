@@ -20,7 +20,7 @@ async function userChoiceRock() {
     const result = await eel.mouseClassic("Rock")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
-    document.getElementById("userChoise").textContent = result;
+    document.getElementById("result").textContent = result;
     document.getElementById("whatUserPlayed").textContent = userName + " chose " + userChoice;
     document.getElementById("whatComputerPlayed").textContent = "The Computer chose " + computerChoice;
     document.getElementById("userScore").textContent = userName + " Score: " + userScore;
@@ -45,7 +45,7 @@ async function userChoicePaper() {
     const result = await eel.mouseClassic("Paper")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
-    document.getElementById("userChoise").textContent = result;
+    document.getElementById("result").textContent = result;
     document.getElementById("whatUserPlayed").textContent = userName + " chose " + userChoice;
     document.getElementById("whatComputerPlayed").textContent = "The Computer chose " + computerChoice;
     document.getElementById("userScore").textContent = userName + " Score: " + userScore;
@@ -71,7 +71,7 @@ async function userChoiceScissor() {
     const result = await eel.mouseClassic("Scissors")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
-    document.getElementById("userChoise").textContent = result;
+    document.getElementById("result").textContent = result;
     document.getElementById("whatUserPlayed").textContent = userName + " chose " + userChoice;
     document.getElementById("whatComputerPlayed").textContent = "The Computer chose " + computerChoice;
     document.getElementById("userScore").textContent = userName + " Score: " + userScore;
