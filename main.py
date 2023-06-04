@@ -112,18 +112,18 @@ def Avatar(userChoise):
 # Challenge Mode 
 @eel.expose
 def challenge_mode(user_choice):
-    global rounds, userScoreChallengeMode , computerScoreChallengeMode,  playerChoice, computerChoice, coins
+    global rounds, userScoreChallengeMode , computerScoreChallengeMode, coins , computerChoiceChallengeMode
     userScoreChallengeMode = user_score
     computerScoreChallengeMode = computer_score
 
     choices = ["Rock", "Paper", "Scissors"]
-    computer_choice = random.choice(choices)
+    computerChoiceChallengeMode = random.choice(choices)
     coins = 10
-    if user_choice == computer_choice:
+    if user_choice == computerChoiceChallengeMode:
         result = "It's a tie!"
-    elif (user_choice == "Rock" and computer_choice == "Scissors") or \
-            (user_choice == "Paper" and computer_choice == "Rock") or \
-            (user_choice == "Scissors" and computer_choice == "Paper"):
+    elif (user_choice == "Rock" and computerChoiceChallengeMode == "Scissors") or \
+            (user_choice == "Paper" and computerChoiceChallengeMode == "Rock") or \
+            (user_choice == "Scissors" and computerChoiceChallengeMode == "Paper"):
         result = "You win!"
         userScoreChallengeMode += 1
         coins += 10  # Increase coins by 10 for winning
@@ -133,6 +133,10 @@ def challenge_mode(user_choice):
         coins -= 10
     return result
 
+@eel.expose
+def computerChoiceChallenge():
+    global computerChoiceChallengeMode
+    return computerChoiceChallengeMode
 
 @eel.expose
 def userScoreChallengeMode():
