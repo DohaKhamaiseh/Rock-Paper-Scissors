@@ -17,19 +17,14 @@ async function userChoiseRock() {
     if (result === "You win!") {
         
         total_user_score += user_score
-        document.getElementById("user_score").textContent = total_user_score;
-        document.getElementById("userName").textContent = userName;
+        document.getElementById("user_score").textContent = userName + " score: " + "" + total_user_score;
+       
     }
 
 
     else if ((computer_score == 1)) {
-        localStorage.setItem("userName", userName);
-        localStorage.setItem("userScore", total_user_score);
-        
-
-        window.location.href = './endStreak.html'
-
-        
+          window.location.href = `./endStreak.html?user_score=${encodeURIComponent(total_user_score)}`;
+     
     }
 
    
@@ -46,18 +41,17 @@ async function userChoisePaper() {
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
 
-    // console.log(result)
-
     if (result === "You win!") {
+        
         total_user_score += user_score
-        document.getElementById("user_score").textContent = total_user_score;
-        document.getElementById("userName").textContent = userName;
+        document.getElementById("user_score").textContent = userName + " score: " + "" + total_user_score;
+       
     }
 
 
     else if ((computer_score == 1)) {
-
-        window.location.href = './endStreak.html'
+          window.location.href = `./endStreak.html?user_score=${encodeURIComponent(total_user_score)}`;
+     
     }
 
 }
@@ -73,18 +67,17 @@ async function userChoiseScissor() {
     document.getElementById("roundResult").textContent = result;
     document.getElementById("roundResult").style.display = "block";
 
-    // console.log(result)
-
     if (result === "You win!") {
+        
         total_user_score += user_score
-        document.getElementById("user_score").textContent = total_user_score;
-        document.getElementById("userName").textContent = userName;
+        document.getElementById("user_score").textContent = userName + " score: " + "" + total_user_score;
+       
     }
 
 
     else if ((computer_score == 1)) {
-
-        window.location.href = './endStreak.html'
+          window.location.href = `./endStreak.html?user_score=${encodeURIComponent(total_user_score)}`;
+     
     }
 
 
