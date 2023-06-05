@@ -7,40 +7,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="/eel.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/28179b0d71.js"></script>
+    <link rel="stylesheet" href="classicStyle.css">
 </head>
 
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
+
+    <header class="header">
+        <nav class="headerNav">
+            <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
+                    alt="Rock Paper Scissors Logo"></a>
+            <h1 class="title">Rock Paper Scissors</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link"><u>Home</u></a></li>
+                <li><a href="modes.html" class="nav-link">Game Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
     </header>
+
 
     <main>
         <h2>Game Over</h2>
-
-
-
-        <h3 id="userChoise"></h3>
-        <h2 id="result"></h2> 
+        <h3 id="userChoice"></h3>
+        <br>
+        <h2 id="result"></h2>
+        <br> <br>
 
         <button onclick="window.location.href = './classicMouse.html';">Play Again</button>
-
-        <h3 id="result"></h3>
-        
+        <h3 id="result"></h3><br>
         <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+
     </main>
 
 
-    <footer class="indexfooter">
+    <footer>
+        <div class="wrapper">
+            <div class="social-icons">
+                <a class="social-icon twitter" href="mailto:esmailjawabreh@gmail.com" target="_blank" rel="author">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </a>
 
+                <a class="social-icon instagram" href="https://www.instagram.com/esmail.sudgi/" target="_blank"
+                    rel="author">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon github" href="https://github.com/Esmail-Jawabreh" target="_blank" rel="author">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
     </footer>
+
 
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const result = urlParams.get('result');
         document.getElementById("result").textContent = result;
     </script>
-
 
 </body>
 
