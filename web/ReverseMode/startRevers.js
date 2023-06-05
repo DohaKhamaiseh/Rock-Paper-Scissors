@@ -32,20 +32,9 @@ async function userChoiseRock() {
 
     rounds -= 1
     if (rounds == 0) {
-        if (userScore > computerScore){
-            result === "You win!"
-            localStorage.setItem("result", result);
-        }
-        else if (userScore < computerScore){
-            result === "Computer wins!"
-            localStorage.setItem("result", result);
-        }
-        else{
-            result === "It's a tie!"
-            localStorage.setItem("result", result);
-        }
+        EndStreak()
         
-        window.location.href = './endReverse.html'
+        
     }
 }
 
@@ -73,7 +62,9 @@ async function userChoisePaper() {
 
     rounds -= 1
     if (rounds == 0) {
-        window.location.href = './endReverse.html'
+        EndStreak()
+        
+        
     }
 }
 
@@ -93,18 +84,37 @@ async function userChoiseScissor() {
         userScore += 1;
         document.getElementById("userScore").textContent = userName + " Score:" + userScore;
     } else if (result === "Computer wins!") {
-
         computerScore += 1;
         document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     }
 
     rounds -= 1
     if (rounds == 0) {
-
-        window.location.href = './endReverse.html'
+        
+        EndStreak()
+        
     }
 }
 
 document.getElementById("btnRock").onclick = userChoiseRock;
 document.getElementById("btnPaper").onclick = userChoisePaper;
 document.getElementById("btnScissor").onclick = userChoiseScissor;
+
+function EndStreak(){
+    if (userScore > computerScore){
+        result = "You win!"
+        localStorage.setItem("result", result);
+        window.location.href = './endReverse.html'
+    }
+    else if (userScore < computerScore){
+        result = "Computer wins!"
+        localStorage.setItem("result", result);
+        window.location.href = './endReverse.html'
+    }
+    else{
+        result = "It's a tie!"
+        localStorage.setItem("result", result);
+        window.location.href = './endReverse.html'
+    }
+
+}
