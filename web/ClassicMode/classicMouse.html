@@ -19,7 +19,7 @@
                     alt="Rock Paper Scissors Logo"></a>
             <h1 class="title">Rock Paper Scissors</h1>
             <ul class="nav-links">
-                <li><a href="/" class="nav-link"><u>Home</u></a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="modes.html" class="nav-link">Game Menu</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
@@ -28,17 +28,18 @@
 
 
     <main>
-        <h2>Classic Mode</h2>
+        <h2 style="color: white; padding-bottom: 40px;  padding-top: 20px;">Classic Mode</h2>
 
-        <form>
-            <label for="rounds">How many roundes do you want to play?</label>
-            <input type="text" id="rounds" name="rounds">
+        <form style=" padding-bottom: 40px; color: white;">
+            <label for="rounds" class="label-text">How many rounds do you want to play?</label>
+            <input type="text" id="rounds" name="rounds" style="width: 200px; height: 30px;">
         </form>
-
-        <button id="startBtn">Start Game</button>
+        <div style = " padding-bottom: 40px;">
+            <button id="startBtn" >Start Game</button>
+        </div>
 
         <h3>Game Rules:</h3>
-        <p> - Rock beats Scissors: Rock smashes or breaks Scissors.<br>
+        <p class="Roles-text"> - Rock beats Scissors: Rock smashes or breaks Scissors.<br>
             - Paper beats Rock: Paper wraps and covers Rock.<br>
             - Scissors beat Paper: Scissors cuts Paper.<br><br>
 
@@ -47,8 +48,13 @@
             If one player chooses Rock and the other chooses Scissors, Rock wins.<br>
             If one player chooses Scissors and the other chooses Paper, Scissors win.<br>
             If one player chooses Paper and the other chooses Rock, Paper wins.</p>
-        <button onclick="window.location.href = './classicMode.html';">Return</button>
-        <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+
+        <div style = " padding-top: 130px; padding-left: 1050px;"> 
+            <button onclick="window.location.href = './classicMode.html';">Return</button>
+            <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+        </div>
+        
+        
     </main>
 
 
