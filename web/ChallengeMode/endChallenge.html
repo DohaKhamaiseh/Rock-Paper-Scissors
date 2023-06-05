@@ -21,6 +21,7 @@
 
 
         <h3 id="userChoise"></h3>
+        <h3 id="Result"></h3>
 
         <button onclick="window.location.href = './startChallenge.html';">Play Again</button>
         <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
@@ -31,7 +32,11 @@
 
     </footer>
 
-    <script src="challenge.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const result = urlParams.get('result');
+        document.getElementById("Result").textContent = result;
+    </script>
 
 
 </body>
