@@ -19,6 +19,7 @@
 
 <body>
     <header class="header">
+        <audio src="../Assets/ThemeSong2.mp3" autoplay loop></audio>
         <nav class="headerNav">
             <a href="index.html"><img class="logo" src="./Assets/rockPaperScissors.png"
                     alt="Rock Paper Scissors Logo"></a>
@@ -115,7 +116,15 @@
     </footer>
 
     <script src="./JS/index.js"></script>
-
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var div = document.querySelector(".card0");
+          div.addEventListener("click", function() {
+            var audio = new Audio("../Assets/sara.mp3");
+            audio.play();
+          });
+        });
+      </script>
 
 </body>
 

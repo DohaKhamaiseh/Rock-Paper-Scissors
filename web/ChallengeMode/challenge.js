@@ -4,7 +4,14 @@ let computerScore = 0;
 let userName = "";
 let totalcoins = 10;
 
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
+
 async function userChoiseRock() {
+    playSoundEffect("../Assets/RockSound.mp3");
+
     const result = await eel.challenge_mode("Rock")();
     const user_score = await eel.userScoreChallengeMode()()
     const computer_score = await eel.computerScoreChallengeMode()()
@@ -38,6 +45,9 @@ async function userChoiseRock() {
 }
 
 async function userChoisePaper() {
+
+    playSoundEffect("../Assets/PaperSound.mp3");
+
     const result = await eel.challenge_mode("Paper")();
     const user_score = await eel.userScoreChallengeMode()()
     const computer_score = await eel.computerScoreChallengeMode()()
@@ -71,6 +81,9 @@ async function userChoisePaper() {
 }
 
 async function userChoiseScissor() {
+
+    playSoundEffect("../Assets/ScissorsSound.mp3");
+
     const result = await eel.challenge_mode("Scissors")();
     const user_score = await eel.userScoreChallengeMode()()
     const computer_score = await eel.computerScoreChallengeMode()()

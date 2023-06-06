@@ -14,7 +14,14 @@ async function getName() {
 }
 getName();
 
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
+
 async function userChoiceRock() {
+    playSoundEffect("../Assets/RockSound.mp3");
+
     const result = await eel.mouseClassic("Rock")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
@@ -42,6 +49,8 @@ async function userChoiceRock() {
 }
 
 async function userChoicePaper() {
+    playSoundEffect("../Assets/PaperSound.mp3");
+
     const result = await eel.mouseClassic("Paper")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
@@ -68,7 +77,9 @@ async function userChoicePaper() {
     }
 }
 
-async function userChoiceScissor() {
+async function userChoiceScissors() {
+    playSoundEffect("../Assets/ScissorsSound.mp3");
+
     const result = await eel.mouseClassic("Scissors")();
     const userChoice = await eel.userChoiceClassic()();
     const computerChoice = await eel.computerChoiceClassic()();
@@ -124,4 +135,4 @@ function calculateTotalResult() {
 
 document.getElementById("btnRock").onclick = userChoiceRock;
 document.getElementById("btnPaper").onclick = userChoicePaper;
-document.getElementById("btnScissor").onclick = userChoiceScissor;
+document.getElementById("btnScissor").onclick = userChoiceScissors;
