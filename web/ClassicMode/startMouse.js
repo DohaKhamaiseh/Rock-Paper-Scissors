@@ -122,6 +122,7 @@ function calculateTotalResult() {
     }
 }
 
+  
 document.getElementById("btnRock").onclick = userChoiceRock;
 document.getElementById("btnPaper").onclick = userChoicePaper;
 document.getElementById("btnScissor").onclick = userChoiceScissor;

@@ -28,12 +28,25 @@
     <main>
         <h2 style="color: white; padding-bottom: 60px; ">Streak game logic</h2>
 
-        <div class="button-container" >
-            <button id="btnRock">Rock</button>
-            <button id="btnPaper">Paper</button>
-            <button id="btnScissor">Scissors</button>
-          </div>
-        <div style = " padding-top: 70px;">
+        <div class="button-container">
+            <div class="button-wrapper">
+                <div class="image-container1">
+                    <img src="../Assets/rock.png" alt="Rock">
+                </div>
+                <div class="image-container2">
+                    <img src="../Assets/paper.png" alt="Paper">
+                </div>
+                <div class="image-container3">
+                    <img src="../Assets/scissors.png" alt="Scissors">
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button id="btnRock">Rock</button>
+                <button id="btnPaper">Paper</button>
+                <button id="btnScissor">Scissors</button>
+            </div>
+        </div>
+        <div style=" padding-top: 70px;">
             <h3 id="whatUserPlayed"></h3>
             <h3 id="whatComputerPlayed"></h3>
             <br>
@@ -43,13 +56,13 @@
         </div>
 
 
-        <div style = " padding-top: 80px; padding-left: 10px;">
+        <div style=" padding-top: 80px; padding-left: 10px;">
             <button onclick="window.location.href = './streakMode.html';">Return</button>
         </div>
 
-        
 
-        
+
+
 
     </main>
 
