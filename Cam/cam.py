@@ -5,8 +5,6 @@ from cvzone.HandTrackingModule import HandDetector
 import time
 import os
 
-
-
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
@@ -21,7 +19,13 @@ timer = 0
 stateResult = False
 startGame = False
 
-
+# Define the font and text color for the score and counter
+font = cv2.FONT_HERSHEY_PLAIN
+text_scale = 4
+text_thickness = 6
+text_color = (255, 255, 255)  # White color
+green_color = (0, 255, 0)  # Green color
+red_color = (0, 0, 255)  # Red color
 
 def camStart():
     global cap, detector, timer, stateResult, startGame, scores, currentT, previousT
@@ -44,7 +48,7 @@ def camStart():
         if startGame:
             if stateResult is False:
                 timer = time.time() - initialTime
-                cv2.putText(imgBG, str(int(timer)), (605, 435), cv2.FONT_HERSHEY_PLAIN, 6, (255, 0, 255), 4)
+                cv2.putText(imgBG, str(int(timer)), (605, 435), font, text_scale, text_color, text_thickness)
 
                 if timer > 3:
                     stateResult = True
@@ -84,20 +88,17 @@ def camStart():
         if stateResult:
             imgBG = cvzone.overlayPNG(imgBG, imgAI, (149, 310))
 
-        cv2.putText(imgBG, str(scores[0]), (410, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
-        cv2.putText(imgBG, str(scores[1]), (1112, 215), cv2.FONT_HERSHEY_PLAIN, 4, (255, 255, 255), 6)
+        score_text_width = cv2.getTextSize(str(scores[0]), font, text_scale, text_thickness)[0][0]
+        cv2.putText(imgBG, str(scores[0]), (410 - score_text_width, 215), font, text_scale, text_color, text_thickness)
+        cv2.putText(imgBG, str(scores[1]), (1112, 215), font, text_scale, text_color, text_thickness)
 
-        if scores[1] == 10:
+        if scores[1] == 5:
             cv2.rectangle(imgBG, (0, 0), (1280, 720), (0, 0, 0), cv2.FILLED)
-            cv2.putText(imgBG, "CONGRATS! YOU WON.", (45, 375), cv2.FONT_HERSHEY_PLAIN, 7, (0, 0, 255), 20)
-            cv2.imshow("BG", imgBG)
-            break
+            cv2.putText(imgBG, "YOU WON!", (290, 375), font, 7, green_color, 20)
 
-        if scores[0] == 10:
+        if scores[0] == 5:
             cv2.rectangle(imgBG, (0, 0), (1280, 720), (0, 0, 0), cv2.FILLED)
-            cv2.putText(imgBG, "HARD LUCK! YOU LOST.", (45, 375), cv2.FONT_HERSHEY_PLAIN, 7, (0, 0, 255), 20)
-            cv2.imshow("BG", imgBG)
-            break
+            cv2.putText(imgBG, "YOU LOST!", (290, 375), font, 7, red_color, 20)
 
         cv2.imshow("BG", imgBG)
 
@@ -105,8 +106,7 @@ def camStart():
         fps = 1 / (currentT - previousT)
         previousT = currentT
 
-        cv2.putText(img, 'Client FPS:' + str(int(fps)), (10, 670), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=1,
-                    color=(255, 0, 0), thickness=2)
+        cv2.putText(img, 'Client FPS:' + str(int(fps)), (10, 670), font, 4, text_color, text_thickness)
 
         key = cv2.waitKey(1)
 
@@ -119,5 +119,6 @@ def camStart():
             break
 
     cap.release()
-    cv2.destroyAllWindows()         
+    cv2.destroyAllWindows()
 
+# camStart()

@@ -124,6 +124,12 @@
     filter: blur(2px);
   }
 
+
+  button:disabled {
+    opacity: 0.5; /* Example: reduce opacity for disabled state */
+    cursor: not-allowed; /* Example: change cursor for disabled state */
+  }
+  
   @keyframes animate {
     0% {
         background-position: 0 0;
