@@ -18,7 +18,7 @@
                     alt="Rock Paper Scissors Logo"></a>
             <h1 class="title">Rock Paper Scissors</h1>
             <ul class="nav-links">
-                <li><a href="/" class="nav-link"><u>Home</u></a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="modes.html" class="nav-link">Game Menu</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
@@ -26,16 +26,24 @@
     </header>
 
     <main>
-        <h2>Nine Cards Mode</h2>
+        <h2 style="color: white; padding-bottom: 60px;  padding-top: 20px;">Nine Cards Mode</h2>
 
-        <button onclick="window.location.href = './startNineCards.html';">Start Game</button>
+        <div style = " padding-bottom: 40px;">
+            <button onclick="window.location.href = './startNineCards.html';">Start Game</button>
+        </div>
+
+        
         <h3>Game Rules:</h3>
-        <p> - Both you and the computer will choose one of the three options: Rock, Paper, or Scissors.<br>
+        <p class="Roles-text"> - Both you and the computer will choose one of the three options: Rock, Paper, or Scissors.<br>
             - Rock beats Scissors, Scissors beats Paper, and Paper beats Rock.<br>
             - If both players choose the same option, it's a tie.<br>
             - You can choose each option (Rock, Paper, Scissors) up to 3 times only during the game.<br>
             - The game consists of 9 rounds in total.</p>
-        <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+        </div>
+        
     </main>
 
 

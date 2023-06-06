@@ -18,7 +18,7 @@
                     alt="Rock Paper Scissors Logo"></a>
             <h1 class="title">Rock Paper Scissors</h1>
             <ul class="nav-links">
-                <li><a href="/" class="nav-link"><u>Home</u></a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="modes.html" class="nav-link">Game Menu</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
@@ -26,19 +26,31 @@
     </header>
 
     <main>
+        <div class="button-container"  style = " padding-top: 70px;">
+            <button id="btnRock">Rock</button>
+            <button id="btnPaper">Paper</button>
+            <button id="btnScissor">Scissors</button>
+            <h3 id="userChoice"></h3>
+          </div>
 
-        <button id="btnRock">Rock</button>
-        <button id="btnPaper">Paper</button>
-        <button id="btnScissor">Scissors</button>
-        <h3 id="userChoice"></h3>
+        
+          <div style = " padding-top: 70px;">
+            <h3 id="whatUserPlayed"></h3>
+            <h3 id="whatComputerPlayed"></h3>
+            <br>
+            <h3 id="roundResult" style="display: none;"></h3>
+            <br>
+            <h3 id="userScore"></h3>
+            <h3 id="computerScore"></h3>
+            <br>
+            <h3 id="roundCounter"></h3>
+        </div>
 
-        <h3 id="whatUserPlayed"></h3>
-        <h3 id="whatComputerPlayed"></h3>
-        <h3 id="roundResult" style="display: none;"></h3>
-        <h3 id="userScore"></h3>
-        <h3 id="computerScore"></h3>
-        <h3 id="roundCounter"></h3>
-        <button onclick="window.location.href = './reverseMode.html';">Return</button>
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = './reverseMode.html';">Return</button>
+        </div>
+        
+        
 
     </main>
 

@@ -19,7 +19,7 @@
                     alt="Rock Paper Scissors Logo"></a>
             <h1 class="title">Rock Paper Scissors</h1>
             <ul class="nav-links">
-                <li><a href="/" class="nav-link"><u>Home</u></a></li>
+                <li><a href="/" class="nav-link">Home</a></li>
                 <li><a href="modes.html" class="nav-link">Game Menu</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
@@ -27,16 +27,25 @@
     </header>
 
     <main>
-        <h2>Streak Mode</h2>
-        <button onclick="window.location.href = './startStreak.html';">Start Game</button>
+        <h2 style="color: white; padding-bottom: 60px;  padding-top: 20px;">Streak Mode</h2>
+
+       
+        <div style = " padding-bottom: 40px;">
+            <button onclick="window.location.href = './startStreak.html';">Start Game</button>
+        </div>
+        
 
         <h3>Game Rules:</h3>
-        <p> - The player will continue playing until losing.<br>
+        <p class="Roles-text"> - The player will continue playing until losing.<br>
             - Rock beats Scissors.<br>
             - Paper beats Rock.<br>
             - Scissors beat Paper.</p>
 
-        <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+        </div>
+
+        
 
     </main>
 

@@ -284,4 +284,9 @@
   ::-webkit-scrollbar-thumb {
     background: #333;
   }
-
+  .Roles-text {
+    font-size: 15px; 
+  }
+  .button-container button {
+    margin-right: 8px;
+  }
