@@ -13,6 +13,7 @@
 
 <body>
     <header class="header">
+        <audio src="../Assets/Sounds/ThemeSong2.mp3" autoplay loop></audio>
         <nav class="headerNav">
             <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
                     alt="Rock Paper Scissors Logo"></a>
@@ -27,29 +28,31 @@
 
 
     <main>
-        <h2 style="color: white; padding-bottom: 60px;  padding-top: 20px;">Avatar Mode</h2>
+        <h2 style="color: #333; padding-bottom: 60px;  padding-top: 20px; margin-top: 1%;">Avatar</h2>
 
         <form style=" padding-bottom: 40px; color: white;">
             <label for="round" class="label-text">How many roundes do you want to play?</label>
+            <br>
             <input type="text" id="round" name="round" style="width: 200px; height: 30px;">
         </form>
-        
 
-        <div style = " padding-bottom: 40px;">
+
+        <div style=" padding-bottom: 40px; margin-top: 2%;">
             <button id="startBtn">Start Game</button>
         </div>
 
-        
-        <h3>Game Rules:</h3>
-        <p class="Roles-text"> - Earth beats Water (Earth covers and contains Water).<br>
-            - Water beats Fire (Water extinguishes Fire).<br>
-            - Fire beats Air (Fire burns and consumes Air).<br>
-            - Air beats Earth (Air erodes and moves Earth).</p>
 
-        <div style = " padding-top: 130px; padding-left: 1050px;"> 
+        <h3 style="margin-top: 2%;">Game Rules:</h3>
+        <br>
+        <p class="Roles-text">Earth beats Water (Earth covers and contains Water).<br>
+            Water beats Fire (Water extinguishes Fire).<br>
+            Fire beats Air (Fire burns and consumes Air).<br>
+            Air beats Earth (Air erodes and moves Earth).</p>
+
+        <div style=" padding-top: 130px; padding-left: 1050px;">
             <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
         </div>
-        
+
 
     </main>
 
