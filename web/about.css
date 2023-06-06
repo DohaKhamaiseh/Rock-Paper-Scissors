@@ -240,15 +240,15 @@ body {
 
 
 .card3 {
-    background: URL("https://i.pinimg.com/564x/5b/a9/9a/5ba99a3fd59ca8a98d24f36debda382a.jpg") center center no-repeat;
-    background-size: 350px;
+    background: URL("./Assets/ourTeam/default.png") center center no-repeat;
+    background-size: 640px;
     margin-left: 3%;
     width: 50%;
 }
 
 .card3:hover {
-    background: URL("https://i.pinimg.com/564x/5b/a9/9a/5ba99a3fd59ca8a98d24f36debda382a.jpg") left center no-repeat;
-    background-size: 370px;
+    background: URL("./Assets/ourTeam/default.png") left center no-repeat;
+    background-size: 640px;
 }
 
 .card3:hover h2 {
@@ -261,14 +261,14 @@ body {
 
 
 .card4 {
-    background: URL("./Assets/ourTeam/Doha.png") center center no-repeat;
+    background: URL("./Assets/ourTeam/default.png") center center no-repeat;
     background-size: 640px;
     margin-left: 3%;
     width: 50%;
 }
 
 .card4:hover {
-    background: URL("./Assets/ourTeam/Doha.png") left center no-repeat;
+    background: URL("./Assets/ourTeam/default.png") left center no-repeat;
     background-size: 640px;
 }
 
