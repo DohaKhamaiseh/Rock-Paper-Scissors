@@ -12,6 +12,7 @@
 <body>
 
     <header class="header">
+        <audio src="../Assets/Sounds/ThemeSong2.mp3" autoplay loop></audio>
         <nav class="headerNav">
             <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
                     alt="Rock Paper Scissors Logo"></a>
@@ -24,19 +25,21 @@
         </nav>
     </header>
 
-    
-    <main>
 
-        <div class="button-container" style = " padding-top: 70px;" >
+    <main>
+        <h2 style="color: white; padding-bottom: 60px;  padding-top: 40px;">Challenge Mode</h2>
+
+        <div class="button-container" style=" padding-top: 40px;">
             <button id="btnRock">Rock</button>
             <button id="btnPaper">Paper</button>
             <button id="btnScissor">Scissors</button>
-            
-          </div>
-        
 
-          <div style = " padding-top: 70px;">
+        </div>
+
+
+        <div style=" padding-top: 70px;">
             <h3 id="coins"></h3>
+            <br>
             <h3 id="whatUserPlayed"></h3>
             <h3 id="whatComputerPlayed"></h3>
             <br>
@@ -45,13 +48,13 @@
             <h3 id="userScore"></h3>
             <h3 id="computerScore"></h3>
         </div>
-        
 
-        <div style = " padding-top: 80px; padding-left: 10px;">
+
+        <div style=" padding-top: 80px; padding-left: 10px;">
             <button onclick="window.location.href = './challengeMode.html';">Return</button>
         </div>
 
-        
+
     </main>
 
 

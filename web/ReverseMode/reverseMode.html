@@ -13,6 +13,7 @@
 
 <body>
     <header class="header">
+        <audio src="../Assets/Sounds/ThemeSong2.mp3" autoplay loop></audio>
         <nav class="headerNav">
             <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
                     alt="Rock Paper Scissors Logo"></a>
@@ -26,30 +27,32 @@
     </header>
 
     <main>
-        <h2 style="color: white; padding-bottom: 60px;  padding-top: 20px;">Reverse Mode</h2>
+        <h2 style="color: #fff; padding-bottom: 60px;  padding-top: 20px; margin-top: 1.5%;">Reverse Mode</h2>
 
         <form style=" padding-bottom: 40px; color: white;">
             <label for="rounds" class="label-text">How many rounds do you want to play?</label>
+            <br>
             <input type="text" id="rounds" name="rounds" style="width: 200px; height: 30px;">
         </form>
-        <div style = " padding-bottom: 40px;">
-            <button id="startBtn">Start Game</button>
+        <div style=" padding-bottom: 25px; ">
+            <button id="startBtn">Start</button>
         </div>
 
 
-        
 
-        <h3>Game Rules:</h3>
-        <p class="Roles-text"> - the rules of the game are reversed.<br>
-            - instead of Rock beating Scissors, Scissors beat Rock.<br>
-            - Rock beat Paper.<br>
-            - Paper beat Scissors.</p>
-        
-        <div style = " padding-top: 80px; padding-left: 10px;">
+
+        <h3 style="margin-top: 2%;">Game Rules:</h3>
+        <br>
+        <p class="Roles-text">The rules of the game are reversed.<br>
+            instead of Rock beating Scissors, Scissors beat Rock.<br>
+            Rock beat Paper.<br>
+            Paper beat Scissors.</p>
+
+        <div style=" padding-top: 80px; padding-left: 10px;">
             <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
         </div>
 
-       
+
     </main>
 
 

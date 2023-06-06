@@ -2,7 +2,17 @@ let total_user_score = 0;
 let computerScore = 0;
 
 
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
+
+
 async function userChoiseRock() {
+
+    playSoundEffect("../Assets/RockSound.mp3");
+
+
     const result = await eel.Streak_Mode("Rock")();
     let user_score = await eel.userScoreStreak()()
     let computer_score = await eel.computerScoreStreak()()
@@ -31,6 +41,9 @@ async function userChoiseRock() {
 }
 
 async function userChoisePaper() {
+
+    playSoundEffect("../Assets/PaperSound.mp3");
+
     const result = await eel.Streak_Mode("Paper")();
     let user_score = await eel.userScoreStreak()()
     let computer_score = await eel.computerScoreStreak()()
@@ -57,6 +70,9 @@ async function userChoisePaper() {
 }
 
 async function userChoiseScissor() {
+
+    playSoundEffect("../Assets/ScissorsSound.mp3");
+
     const result = await eel.Streak_Mode("Scissors")();
     let user_score = await eel.userScoreStreak()()
     let computer_score = await eel.computerScoreStreak()()

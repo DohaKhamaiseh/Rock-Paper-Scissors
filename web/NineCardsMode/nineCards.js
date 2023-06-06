@@ -6,7 +6,15 @@ let userScore = 0;
 let computerScore = 0;
 let roundResults = [];
 
+
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
+
 async function userChoiseRock() {
+    playSoundEffect("../Assets/RockSound.mp3");
+
     const result = await eel.nineCards_mode("Rock")();
     rounds -= 1;
 
@@ -39,6 +47,9 @@ async function userChoiseRock() {
 }
 
 async function userChoisePaper() {
+
+    playSoundEffect("../Assets/PaperSound.mp3");
+
     const result = await eel.nineCards_mode("Paper")();
     rounds -= 1;
 
@@ -71,6 +82,9 @@ async function userChoisePaper() {
 }
 
 async function userChoiseScissor() {
+
+    playSoundEffect("../Assets/ScissorsSound.mp3");
+
     const result = await eel.nineCards_mode("Scissors")();
     rounds -= 1;
 

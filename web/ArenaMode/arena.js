@@ -2,8 +2,14 @@ let userScore = 0;
 let computerScore = 0;
 let userName = "";
 
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
 
 async function userChoiceRock() {
+    playSoundEffect("../Assets/RockSound.mp3");
+
     const result = await eel.arenaMode("Rock")();
     const computerChoice = await eel.computerChoiceArena()();
     const userName = await eel.getUserName()();
@@ -23,6 +29,8 @@ async function userChoiceRock() {
 
 
 async function userChoicePaper() {
+    playSoundEffect("../Assets/PaperSound.mp3");
+
     const result = await eel.arenaMode("Paper")();
     const computerChoice = await eel.computerChoiceArena()();
     const userName = await eel.getUserName()();
@@ -41,6 +49,9 @@ async function userChoicePaper() {
 }
 
 async function userChoiceScissor() {
+
+    playSoundEffect("../Assets/ScissorsSound.mp3");
+
     const result = await eel.arenaMode("Scissors")();
     const computerChoice = await eel.computerChoiceArena()();
     const userName = await eel.getUserName()();

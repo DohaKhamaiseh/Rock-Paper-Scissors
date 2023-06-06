@@ -1,5 +1,13 @@
 rounds = 1
 
+
+
+function playSoundEffect(soundEffectPath) {
+    const soundEffect = new Audio(soundEffectPath);
+    soundEffect.play();
+}
+
+
 async function getRounds() {
     rounds = await eel.getRounds()()
 }
@@ -12,6 +20,10 @@ let userName = "";
 let roundResults = [];
 
 async function userChoiceWind() {
+
+    playSoundEffect("../Assets/WindSound.mp3");
+
+
     const result = await eel.Avatar("Wind")();
 
     const computerChoice = await eel.computerChoiceAvatarMode()();
@@ -48,6 +60,8 @@ async function userChoiceWind() {
 
 
 async function userChoiceWater() {
+    playSoundEffect("../Assets/WaterSound.mp3");
+
     const result = await eel.Avatar("Water")();
 
 
@@ -82,6 +96,8 @@ async function userChoiceWater() {
 }
 
 async function userChoiceFire() {
+    playSoundEffect("../Assets/FireSound.mp3");
+
     const result = await eel.Avatar("Fire")();
 
 
@@ -117,6 +133,8 @@ async function userChoiceFire() {
 
 
 async function userChoiceEarth() {
+    playSoundEffect("../Assets/EarthSound.mp3");
+
     const result = await eel.Avatar("Earth")();
 
 

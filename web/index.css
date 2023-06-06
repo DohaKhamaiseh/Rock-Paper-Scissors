@@ -111,7 +111,7 @@ button#startGame:hover {
     display: flex;
     font-family: "Poppins", sans-serif;
     margin: 0;
-    margin-top: 13%;
+    margin-top: 7%;
     margin-left: 34%;
     padding: 0;
     position: relative;
@@ -341,4 +341,11 @@ button#startGame:hover {
 
 ::-webkit-scrollbar-thumb {
     background: #333;
+}
+
+
+#welcom {
+    color: #fff;
+    margin-left: 35%;
+    margin-top: 5%;
 }
