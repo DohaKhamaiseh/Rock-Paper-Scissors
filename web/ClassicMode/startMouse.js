@@ -20,7 +20,7 @@ function playSoundEffect(soundEffectPath) {
 }
 
 async function userChoiceRock() {
-    playSoundEffect("../Assets/RockSound.mp3");
+    playSoundEffect("../Assets/Sounds/RockSound.mp3");
 
     const result = await eel.mouseClassic("Rock")();
     const userChoice = await eel.userChoiceClassic()();
@@ -49,7 +49,7 @@ async function userChoiceRock() {
 }
 
 async function userChoicePaper() {
-    playSoundEffect("../Assets/PaperSound.mp3");
+    playSoundEffect("../Assets/Sounds/PaperSound.mp3");
 
     const result = await eel.mouseClassic("Paper")();
     const userChoice = await eel.userChoiceClassic()();
@@ -78,7 +78,7 @@ async function userChoicePaper() {
 }
 
 async function userChoiceScissors() {
-    playSoundEffect("../Assets/ScissorsSound.mp3");
+    playSoundEffect("../Assets/Sounds/ScissorsSound.mp3");
 
     const result = await eel.mouseClassic("Scissors")();
     const userChoice = await eel.userChoiceClassic()();
