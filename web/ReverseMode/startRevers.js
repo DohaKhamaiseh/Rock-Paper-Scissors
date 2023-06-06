@@ -17,7 +17,7 @@ getRounds()
 
 async function userChoiseRock() {
 
-    playSoundEffect("../Assets/RockSound.mp3");
+    playSoundEffect("../Assets/Sounds/RockSound.mp3");
 
     const result = await eel.reversMode("Rock")();
     const computerChoice = await eel.computerChoiceReverse()();
@@ -49,7 +49,7 @@ async function userChoiseRock() {
 }
 
 async function userChoisePaper() {
-    playSoundEffect("../Assets/PaperSound.mp3");
+    playSoundEffect("../Assets/Sounds/PaperSound.mp3");
 
     const result = await eel.reversMode("Paper")();
     const computerChoice = await eel.computerChoiceReverse()();
@@ -81,7 +81,7 @@ async function userChoisePaper() {
 
 async function userChoiseScissor() {
 
-    playSoundEffect("../Assets/ScissorsSound.mp3");
+    playSoundEffect("../Assets/Sounds/ScissorsSound.mp3");
 
     const result = await eel.reversMode("Scissors")();
     const computerChoice = await eel.computerChoiceReverse()();
