@@ -5,28 +5,77 @@
     <meta charset="UTF-8">
     <title>Rock Paper Scissors Game</title>
     <script type="text/javascript" src="/eel.js"></script>
-
+    <script src="https://kit.fontawesome.com/28179b0d71.js"></script>
+    <link rel="stylesheet" href="challengeStyle.css">
 </head>
 
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
+
+    <header class="header">
+        <nav class="headerNav">
+            <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
+                    alt="Rock Paper Scissors Logo"></a>
+            <h1 class="title">Rock Paper Scissors</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="modes.html" class="nav-link">Game Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <button id="btnRock">Rock</button>
-    <button id="btnPaper">Paper</button>
-    <button id="btnScissor">Scissors</button>
-    <h3 id="coins"></h3>
     
-    <h3 id="whatUserPlayed"></h3>
-    <h3 id="whatComputerPlayed"></h3>
-    <h3 id="roundResult" style="display: none;"></h3>
-    <h3 id="userScore"></h3>
-    <h3 id="computerScore"></h3>   
+    <main>
 
-    <button onclick="window.location.href = './challengeMode.html';">Return</button>
+        <div class="button-container" style = " padding-top: 70px;" >
+            <button id="btnRock">Rock</button>
+            <button id="btnPaper">Paper</button>
+            <button id="btnScissor">Scissors</button>
+            
+          </div>
+        
+
+          <div style = " padding-top: 70px;">
+            <h3 id="coins"></h3>
+            <h3 id="whatUserPlayed"></h3>
+            <h3 id="whatComputerPlayed"></h3>
+            <br>
+            <h3 id="roundResult" style="display: none;"></h3>
+            <br>
+            <h3 id="userScore"></h3>
+            <h3 id="computerScore"></h3>
+        </div>
+        
+
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = './challengeMode.html';">Return</button>
+        </div>
+
+        
+    </main>
+
+
+    <footer>
+        <div class="wrapper">
+            <div class="social-icons">
+                <a class="social-icon twitter" href="mailto:esmailjawabreh@gmail.com" target="_blank" rel="author">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </a>
+
+                <a class="social-icon instagram" href="https://www.instagram.com/esmail.sudgi/" target="_blank"
+                    rel="author">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon github" href="https://github.com/Esmail-Jawabreh" target="_blank" rel="author">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
 
     <script src="challenge.js"></script>
+
 </body>
 
 </html>

@@ -20,7 +20,6 @@ async function userChoiceWind() {
     document.getElementById("userChoise").textContent = userName + " played Wind";
     document.getElementById("computerChoise").textContent = "The Computer played " + computerChoice;
     document.getElementById("result").textContent = result;
-    // document.getElementById("result").style.display = "block";
     document.getElementById("userScore").textContent = userName + " score: " + "" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     document.getElementById("round").textContent = (rounds - 1) + " Round left";
@@ -58,7 +57,6 @@ async function userChoiceWater() {
     document.getElementById("userChoise").textContent = userName + " played Water";
     document.getElementById("computerChoise").textContent = "The Computer played " + computerChoice;
     document.getElementById("result").textContent = result;
-    // document.getElementById("result").style.display = "block";
     document.getElementById("userScore").textContent = userName + " score: " + "" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     document.getElementById("round").textContent = (rounds - 1) + " Round left";
@@ -93,7 +91,6 @@ async function userChoiceFire() {
     document.getElementById("userChoise").textContent = userName + " played Fire";
     document.getElementById("computerChoise").textContent = "The Computer played " + computerChoice;
     document.getElementById("result").textContent = result;
-    // document.getElementById("result").style.display = "block";
     document.getElementById("userScore").textContent = userName + " score: " + "" + userScore;
     document.getElementById("computerScore").textContent = "Computer Score: " + computerScore;
     document.getElementById("round").textContent = (rounds - 1) + " Round left";
@@ -158,14 +155,13 @@ function calculateTotalResult() {
     const ties = roundResults.filter(result => result === "It's a tie!").length;
 
     if (userWins > computerWins) {
-        return "Overall Result: You win!";
+        return "You win!";
     } else if (userWins < computerWins) {
-        return "Overall Result: Computer wins!";
+        return "Computer wins!";
     } else {
-        return "Overall Result: It's a tie!";
+        return "It's a tie!";
     }
 }
-
 
 
 document.getElementById("btnFire").onclick = userChoiceFire;

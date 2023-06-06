@@ -3,45 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
     <script src="/eel.js"></script>
     <link rel="stylesheet" href="modes.css">
+    <script src="https://kit.fontawesome.com/28179b0d71.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/70c682a6d6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header class="header">
         <nav class="headerNav">
-            <div class="logo">
-                <a href="index.html"><img src="./Assets/rockPaperScissors.png" alt="Rock Paper Scissors Logo"></a>
-                <h1>Rock Paper Scissors</h1>
-            </div>
-            <ul class="nav-link">
-                <li><a href="/">Home</a></li>
-                <li><a href="modes.html"><u>Game Menu</u></a></li>
-                <li><a href="about.html">About</a></li>
+            <a href="index.html"><img class="logo" src="./Assets/rockPaperScissors.png"
+                    alt="Rock Paper Scissors Logo"></a>
+            <h1 class="title">Rock Paper Scissors</h1>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="/" class="nav-link"><u>Game Menu</u></a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2>Choose Your Mode:</h2>
-        <button onclick="window.location.href = './ClassicMode/classicMode.html';">Classic</button>
-        <button onclick="window.location.href = './AvatarMode/avatarMode.html';">Avatar</button>
-        <button onclick="window.location.href = './NineCardsMode/nineCardsMode.html';">Nine Cards</button>
-        <button onclick="window.location.href = './ChallengeMode/challengeMode.html';">Challenge Mode</button>
-        <button onclick="window.location.href = './ArenaMode/arenaMode.html';">Arena</button>
-        <button onclick="window.location.href = './ReverseMode/reverseMode.html';">Reverse</button>
-        <button onclick="window.location.href = './StreakMode/streakMode.html';">Streak</button>
+        <h2 id="modes">Choose Your Mode:</h2>
+        <div class="card-container">
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Classic"
+                        onclick="window.location.href = './ClassicMode/classicMode.html';">Classic</button>
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Avatar" onclick="window.location.href = './AvatarMode/avatarMode.html';">Avatar</button>
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Nine" onclick="window.location.href = './NineCardsMode/nineCardsMode.html';">Nine
+                        Cards</button>
+
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Challenge"
+                        onclick="window.location.href = './ChallengeMode/challengeMode.html';">Challenge</button>
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Arena" onclick="window.location.href = './ArenaMode/arenaMode.html';">Arena</button>
+
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Reverse"
+                        onclick="window.location.href = './ReverseMode/reverseMode.html';">Reverse</button>
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+
+
+            <div class="card" data-tilt data-tilt-glare data-tilt-max-glare="0.5" data-tilt-scale="1.1">
+                <div class="content">
+                    <button id="Streak" onclick="window.location.href = './StreakMode/streakMode.html';">Streak</button>
+
+                </div>
+                <img src="./Assets/rockPaperScissors.png" alt="" />
+            </div>
+
+        </div>
+
+
     </main>
 
+    <footer>
+        <div class="wrapper">
+            <div class="social-icons">
+                <a class="social-icon twitter" href="mailto:esmailjawabreh@gmail.com" target="_blank" rel="author">
+                    <i class="fas fa-envelope"></i>
+                </a>
 
-    <footer class="indexfooter">
+                <a class="social-icon instagram" href="https://www.instagram.com/esmail.sudgi/" target="_blank"
+                    rel="author">
+                    <i class="fab fa-instagram"></i>
+                </a>
 
+                <a class="social-icon github" href="https://github.com/Esmail-Jawabreh" target="_blank" rel="author">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script src="index.js"></script>
+
 
 
 </body>

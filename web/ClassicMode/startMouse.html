@@ -7,36 +7,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="/eel.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="classicStyle.css">
+    <script src="https://kit.fontawesome.com/28179b0d71.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Rock Paper Scissors</h1>
+    <header class="header">
+        <nav class="headerNav">
+            <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
+                    alt="Rock Paper Scissors Logo"></a>
+            <h1 class="title">Rock Paper Scissors</h1>
+            <ul class="nav-links">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="modes.html" class="nav-link">Game Menu</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <h2>Classic Mouse game logic</h2>
+        <h2 style="color: white; padding-bottom: 60px; ">Classic Mouse game logic</h2>
+        
+        
+        <div class="button-container" >
+            <button id="btnRock">Rock</button>
+            <button id="btnPaper">Paper</button>
+            <button id="btnScissor">Scissors</button>
+          </div>
+        
+        <div style = " padding-top: 70px;">
+            <h3 id="whatUserPlayed"></h3>
+            <h3 id="whatComputerPlayed"></h3>
+            <br>
+            <h3 id="result"></h3>
+            <br>
+            <h3 id="userScore"></h3>
+            <h3 id="computerScore"></h3>
+            <br>
+            <h3 id="roundCounter"></h3>
+        </div>
+        
 
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = './classicMouse.html';">Return</button>
+        </div>
 
-        <button id="btnRock">Rock</button>
-        <button id="btnPaper">Paper</button>
-        <button id="btnScissor">Scissors</button>
-
-        <h3 id="whatUserPlayed"></h3>
-        <h3 id="whatComputerPlayed"></h3>
-        <h3 id="result"></h3>
-        <h3 id="userScore"></h3>
-        <h3 id="computerScore"></h3>
-        <h3 id="roundCounter"></h3>
-
-        <button onclick="window.location.href = './classicMouse.html';">Return</button>
-
+        
     </main>
 
 
-    <footer class="indexfooter">
+    <footer>
+        <div class="wrapper">
+            <div class="social-icons">
+                <a class="social-icon twitter" href="mailto:esmailjawabreh@gmail.com" target="_blank" rel="author">
+                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                </a>
 
+
+                <a class="social-icon instagram" href="https://www.instagram.com/esmail.sudgi/" target="_blank"
+                    rel="author">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a class="social-icon github" href="https://github.com/Esmail-Jawabreh" target="_blank" rel="author">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
     </footer>
 
     <script src="startMouse.js"></script>
