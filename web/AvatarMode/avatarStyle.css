@@ -5,7 +5,7 @@
 }
 
 body {
-  background-image: url("../Assets/BG6.png");
+  background-image: url("../Assets/avatar-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -284,13 +284,59 @@ footer {
 ::-webkit-scrollbar-thumb {
   background: #333;
 }
+
 .label-text {
-  font-size: 20px; 
+  font-size: 20px;
 }
+
 .Roles-text {
-  font-size: 15px; 
+  font-size: 15px;
 }
+
 .button-container button {
   margin-right: 8px;
   margin-top: 1%;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.button-container button {
+  margin-right: 8px;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container1 img {
+  width: 100px;
+  height: 100px;
+  margin-right: 100px;
+}
+
+.image-container2 img {
+  width: 100px;
+  height: 100px;
+  margin-right: 100px;
+}
+
+.image-container3 img {
+  width: 100px;
+  height: 100px;
+  margin-right: 100px;
+}
+
+.image-container4 img {
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
 }

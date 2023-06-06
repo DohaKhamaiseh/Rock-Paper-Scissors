@@ -13,7 +13,6 @@
 
 <body>
     <header class="header">
-        <audio src="../Assets/Sounds/ThemeSong2.mp3" autoplay loop></audio>
         <nav class="headerNav">
             <a href="index.html"><img class="logo" src="../Assets/rockPaperScissors.png"
                     alt="Rock Paper Scissors Logo"></a>
@@ -27,12 +26,26 @@
     </header>
 
     <main>
-        <h2 style="color: #fff; padding-bottom: 60px; margin-top: 2%;">Streak</h2>
-        <br>
+        <audio src="../Assets/Sounds/ThemeSong2.mp3" autoplay loop></audio>
+        <h2 style="color: white; padding-bottom: 60px; ">Streak game logic</h2>
+
         <div class="button-container">
-            <button id="btnRock">Rock</button>
-            <button id="btnPaper">Paper</button>
-            <button id="btnScissor">Scissors</button>
+            <div class="button-wrapper">
+                <div class="image-container1">
+                    <img src="../Assets/rock.png" alt="Rock">
+                </div>
+                <div class="image-container2">
+                    <img src="../Assets/paper.png" alt="Paper">
+                </div>
+                <div class="image-container3">
+                    <img src="../Assets/scissors.png" alt="Scissors">
+                </div>
+            </div>
+            <div class="button-wrapper">
+                <button id="btnRock">Rock</button>
+                <button id="btnPaper">Paper</button>
+                <button id="btnScissor">Scissors</button>
+            </div>
         </div>
         <div style=" padding-top: 70px;">
             <h3 id="whatUserPlayed"></h3>
