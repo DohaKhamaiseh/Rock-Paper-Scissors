@@ -29,20 +29,33 @@
     </header>
 
     <main>
-        <button id="btnRock">Rock</button>
-        <button id="btnPaper">Paper</button>
-        <button id="btnScissor">Scissors</button>
+        
+        <div class="button-container" style = " padding-top: 70px;">
+            <button id="btnRock">Rock</button>
+            <button id="btnPaper">Paper</button>
+            <button id="btnScissor">Scissors</button>
+          </div>
+        
 
+          <div style = " padding-top: 70px;">
+            <h3 id="whatUserPlayed"></h3>
+            <h3 id="whatComputerPlayed"></h3>
+            <br>
+            <h3 id="roundResult" style="display: none;"></h3>
+            <br>
+            <h3><span id="userScore"></span></h3>
+            <h3><span id="computerScore"></span></h3>
+            <br>
+            <h3 id="userChoice"></h3>
+        </div>
 
-        <h3 id="whatUserPlayed"></h3>
-        <h3 id="whatComputerPlayed"></h3>
-        <h3 id="roundResult" style="display: none;"></h3>
-        <h3><span id="userScore"></span></h3>
-        <h3><span id="computerScore"></span></h3>
-        <h3 id="userChoice"></h3>
+        
+        
+        <div style = " padding-top: 100px; padding-left: 10px;">
+            <button onclick="window.location.href = './arenaMode.html';">Return</button>
+        </div>
 
-
-        <button onclick="window.location.href = './arenaMode.html';">Return</button>
+        
     </main>
 
 
