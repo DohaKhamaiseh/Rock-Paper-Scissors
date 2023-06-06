@@ -26,24 +26,30 @@
     </header>
 
     <main>
-        <h2>Reverse Mode</h2>
+        <h2 style="color: white; padding-bottom: 60px;  padding-top: 20px;">Reverse Mode</h2>
 
-        <form>
-
-            <label for="rounds">How many rounds do you want to play?</label>
-            <input type="text" id="rounds" name="rounds">
-
+        <form style=" padding-bottom: 40px; color: white;">
+            <label for="rounds" class="label-text">How many rounds do you want to play?</label>
+            <input type="text" id="rounds" name="rounds" style="width: 200px; height: 30px;">
         </form>
+        <div style = " padding-bottom: 40px;">
+            <button id="startBtn">Start Game</button>
+        </div>
 
-        <button id="startBtn">Start Game</button>
+
+        
 
         <h3>Game Rules:</h3>
-        <p> - the rules of the game are reversed.<br>
+        <p class="Roles-text"> - the rules of the game are reversed.<br>
             - instead of Rock beating Scissors, Scissors beat Rock.<br>
             - Rock beat Paper.<br>
             - Paper beat Scissors.</p>
+        
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+        </div>
 
-        <button onclick="window.location.href = '../modes.html';">Return to Menu</button>
+       
     </main>
 
 

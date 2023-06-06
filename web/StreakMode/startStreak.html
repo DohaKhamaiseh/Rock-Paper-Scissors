@@ -26,19 +26,30 @@
     </header>
 
     <main>
-        <h2>Streak game logic</h2>
+        <h2 style="color: white; padding-bottom: 60px; ">Streak game logic</h2>
+
+        <div class="button-container" >
+            <button id="btnRock">Rock</button>
+            <button id="btnPaper">Paper</button>
+            <button id="btnScissor">Scissors</button>
+          </div>
+        <div style = " padding-top: 70px;">
+            <h3 id="whatUserPlayed"></h3>
+            <h3 id="whatComputerPlayed"></h3>
+            <br>
+            <h3 id="roundResult" style="display: none;"></h3>
+            <br>
+            <h3><span id="userName"></span> <span id="user_score"></span></h3>
+        </div>
 
 
-        <button id="btnRock">Rock</button>
-        <button id="btnPaper">Paper</button>
-        <button id="btnScissor">Scissors</button>
+        <div style = " padding-top: 80px; padding-left: 10px;">
+            <button onclick="window.location.href = './streakMode.html';">Return</button>
+        </div>
 
-        <h3 id="whatUserPlayed"></h3>
-        <h3 id="whatComputerPlayed"></h3>
-        <h3 id="roundResult" style="display: none;"></h3>
-        <h3><span id="userName"></span> <span id="user_score"></span></h3>
+        
 
-        <button onclick="window.location.href = './streakMode.html';">Return</button>
+        
 
     </main>
 
