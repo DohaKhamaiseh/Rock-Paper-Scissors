@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 header {
     background-color: #fff;
     color: #fff;
@@ -42,7 +41,6 @@ ul.nav-links {
     display: flex;
     margin-top: -0.5%;
     margin-right: 1%;
-
 }
 
 li {
@@ -55,7 +53,6 @@ a.nav-link {
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s ease;
-
 }
 
 a.nav-link:hover {
@@ -81,11 +78,8 @@ nav {
 
 .logo img {
     width: 40px;
-    /* Adjust the width as needed */
     height: 40px;
-    /* Adjust the height as needed */
     margin-right: 10px;
-    /* Adjust the spacing as needed */
 }
 
 .logo h1 {
@@ -123,7 +117,6 @@ body {
     background-image: URL("Assets/BG4.png");
 }
 
-
 .container {
     height: auto;
     width: auto;
@@ -135,7 +128,6 @@ body {
     justify-content: space-around;
     align-items: center;
     margin: 0 auto;
-    /* margin: 10%; */
 }
 
 .card1-border,
@@ -148,7 +140,7 @@ body {
     border-radius: 10px;
     transition: border 1s;
     position: relative;
-    margin: 10px;
+    margin: 5px;
 }
 
 .card1-border:hover,
@@ -175,7 +167,6 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-
 }
 
 .card0 {
@@ -197,7 +188,6 @@ body {
 .card0:hover .fa {
     opacity: 1;
 }
-
 
 .card1 {
     background: url("./Assets/ourTeam/Rakan.jpg") center center no-repeat;
@@ -238,7 +228,6 @@ body {
     opacity: 1;
 }
 
-
 .card3 {
     background: URL("./Assets/ourTeam/default.png") center center no-repeat;
     background-size: 640px;
@@ -259,7 +248,6 @@ body {
     opacity: 1;
 }
 
-
 .card4 {
     background: URL("./Assets/ourTeam/default.png") center center no-repeat;
     background-size: 640px;
@@ -279,8 +267,6 @@ body {
 .card4:hover .fa {
     opacity: 1;
 }
-
-
 
 h2 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -310,7 +296,6 @@ h2 {
     justify-content: space-around;
 }
 
-
 .card1-icons:hover .fa,
 .icons:hover .fa,
 .card3-icons:hover {
@@ -318,13 +303,10 @@ h2 {
     transition: 1s;
 }
 
-
 :root {
     --link-size: 53px;
     --trans-props: all 0.3s ease;
 }
-
-
 
 .wrapper {
     width: 100%;
@@ -340,53 +322,43 @@ h2 {
     flex-flow: row wrap;
 }
 
+
 /*** Containers and icons ***/
 
 .social-icon {
     display: flex;
-
     position: relative;
     overflow: hidden;
     /* Trim branded overlays */
-
     width: var(--link-size);
     height: var(--link-size);
     margin: 10px;
-
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 0px 1px 3px #333;
-
     text-decoration: none;
-
     transition: var(--trans-props);
 }
 
 .social-icon i {
     margin: auto;
     /* Perfect centering thanks to parental flex */
-
     font-size: 24px;
     color: #333;
-
     z-index: 1;
     /* Make sure icons will be on top */
-
     transition: var(--trans-props);
 }
+
 
 /*** Branded overlays from the bottom ***/
 
 .social-icon:after {
     content: "";
-
     width: var(--link-size);
     height: var(--link-size);
-
     position: absolute;
-
     transform: translate(0, var(--link-size));
-
     border-radius: 50%;
     transition: var(--trans-props);
 }
@@ -400,13 +372,9 @@ h2 {
 }
 
 .social-icon.instagram:after {
-    background-image: linear-gradient(to bottom left,
-            #4f5bd5,
-            #962fbf,
-            #d62976,
-            #fa7e1e,
-            #feda75);
+    background-image: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
 }
+
 
 /*** Animations ***/
 
@@ -426,9 +394,9 @@ h2 {
 
 
 /* scrollbar */
+
 ::-webkit-scrollbar {
     width: 16px;
-
 }
 
 ::-webkit-scrollbar-track {
@@ -441,6 +409,6 @@ h2 {
 
 #welcom {
     color: #fff;
-    margin-left: 46%;
-    margin-top: 5%;
+    margin-left: 48%;
+    margin-top: 4%;
 }
