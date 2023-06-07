@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("../Assets/background4.jpg");
+    background-image: url("../Assets/BG4.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -51,6 +51,7 @@ nav {
     margin-right: 4%;
     color: #333;
     margin-top: -0.5%;
+    margin-right: 10%;
 }
 
 ul.nav-links {
@@ -128,11 +129,9 @@ button:hover:active:before {
     0% {
         background-position: 0 0;
     }
-
     50% {
         background-position: 400% 0;
     }
-
     100% {
         background-position: 0 0;
     }
@@ -206,6 +205,7 @@ footer {
     flex-flow: row wrap;
 }
 
+
 /*** Containers and icons ***/
 
 .social-icon {
@@ -233,6 +233,7 @@ footer {
     transition: var(--trans-props);
 }
 
+
 /*** Branded overlays from the bottom ***/
 
 .social-icon:after {
@@ -257,6 +258,7 @@ footer {
     background-image: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
 }
 
+
 /*** Animations ***/
 
 .social-icon:hover {
@@ -272,7 +274,9 @@ footer {
     transform: translate(0) scale(1.2);
 }
 
+
 /* scrollbar */
+
 ::-webkit-scrollbar {
     width: 16px;
 }
@@ -296,7 +300,6 @@ footer {
 .button-container button {
     margin-right: 8px;
 }
-
 
 .button-container {
     display: flex;

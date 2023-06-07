@@ -1,463 +1,404 @@
-/* Reset default styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
 header {
-  background-color: #fff;
-  color: #fff;
-  padding: 15px;
-  height: 88%;
+    background-color: #fff;
+    color: #fff;
+    padding: 15px;
+    height: 88%;
 }
 
 body {
-  background-image: url("./Assets/BG4.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 1000vh; */
+    background-image: url("./Assets/BG4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .logo {
-  width: 25%;
-  margin-top: -1%;
-  margin-left: 2.5%;
+    width: 25%;
+    margin-top: -1%;
+    margin-left: 2.5%;
 }
 
 .title {
-  margin-right: 4%;
-  color: #333;
-  margin-top: -0.5%;
+    margin-right: 4%;
+    color: #333;
+    margin-top: -0.5%;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 ul.nav-links {
-  list-style: none;
-  display: flex;
-  margin-top: -0.5%;
-  margin-right: 1%;
-
+    list-style: none;
+    display: flex;
+    margin-top: -0.5%;
+    margin-right: 1%;
 }
 
 li {
-  margin-left: 20px;
+    margin-left: 20px;
 }
 
 a.nav-link {
-  text-decoration: none;
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-  transition: color 0.3s ease;
-
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 a.nav-link:hover {
-  color: #ccc;
+    color: #ccc;
 }
 
 u {
-  text-decoration: none;
-  border-bottom: 2px solid #333;
-  padding-bottom: 2px;
-  font-size: 16px;
+    text-decoration: none;
+    border-bottom: 2px solid #333;
+    padding-bottom: 2px;
+    font-size: 16px;
 }
 
 #modes {
-  color: #fff;
-  align-items: center;
-  margin-left: 42%;
-  margin-top: 4%;
+    color: #fff;
+    align-items: center;
+    margin-left: 44%;
+    margin-top: 4%;
+    margin-bottom: 2%;
 }
 
-/* Button styles */
 button {
-  display: inline-block;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 10px;
-  margin-top: 20px;
-  /* margin-left: 5%; */
-  /* padding-top: 20px; */
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 20px;
 }
 
 button:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 body {
-  background-image: url("./Assets/BG4.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* height: 1000vh; */
-
+    background-image: url("./Assets/BG4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 button#Classic {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  /* margin-top: 30px ; */
-  margin-left: 118%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 90%;
 }
 
 #classicIMG {
-  margin-left: 9.5%;
-  margin-top: 1%;
+    margin-left: 9.5%;
 }
 
 button#Classic:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
 button#Avatar {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 128%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 90%;
 }
 
 button#Avatar:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-
 button#Nine {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 80%;
-  margin-top: 10%;
-  width: 100%;
-
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 50%;
+    margin-top: 10%;
+    width: 100%;
 }
 
 button#Nine:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-
 button#Challenge {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 90%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 60%;
 }
 
 button#Challenge:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-
 button#Arena {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 140%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 105%;
 }
 
 button#Arena:hover {
-  background-color: #555;
+    background-color: #555;
 }
-
 
 button#Reverse {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 110%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 80%;
 }
-
 
 button#Reverse:hover {
-  background-color: #555;
+    background-color: #555;
 }
 
-
 button#Streak {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 134%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 100%;
 }
 
 button#Streak:hover {
-  background-color: #555;
+    background-color: #555;
 }
-
-
-
-
 
 @import url("https://fonts.cdnfonts.com/css/ibm-plex-mono");
-
 * {
-  margin: 0;
-  padding: 0;
-  font-size: 30px;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
 }
 
-
 .card {
-  height: 300px;
-  position: relative;
-  transform-style: preserve-3d;
-  transform: perspective(1000px);
-  width: calc(20.20% - 0px);
-  margin: 2%;
-  margin-top: 4%;
-
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    width: calc(20.20% - 0px);
+    margin: 2%;
+    margin-top: 4%;
 }
 
 .card::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  left: 50%;
-  height: 80%;
-  width: 80%;
-  background: #000;
-  filter: blur(60px);
-  transform: translate3d(-50%, -50%, -60px);
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    height: 80%;
+    width: 80%;
+    background: #000;
+    filter: blur(60px);
+    transform: translate3d(-50%, -50%, -60px);
 }
 
 .card img {
-  height: 80%;
-  width: 80%;
+    height: 80%;
+    width: 80%;
 }
 
 .card .content {
-  padding: 10px 26px;
-  position: absolute;
-  bottom: 4%;
-  color: white;
-  transform: translateZ(25px);
+    padding: 10px 26px;
+    position: absolute;
+    bottom: 4%;
+    color: white;
+    transform: translateZ(25px);
 }
 
 .card .content h2 {
-  font-size: 0.9rem;
-  font-family: "IBM Plex Mono", sans-serif;
-  line-height: 1.2rem;
-  color: #fff;
-
+    font-size: 0.9rem;
+    font-family: "IBM Plex Mono", sans-serif;
+    line-height: 1.2rem;
+    color: #fff;
 }
 
 .card .content h3 {
-  font-size: 0.55rem;
-  font-family: "IBM Plex Mono", sans-serif;
-  color: #fff;
+    font-size: 0.55rem;
+    font-family: "IBM Plex Mono", sans-serif;
+    color: #fff;
 }
 
 .card-container {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  height: 100vh;
-
-
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
 }
-
 
 :root {
-  --link-size: 53px;
-  --trans-props: all 0.3s ease;
+    --link-size: 53px;
+    --trans-props: all 0.3s ease;
 }
 
-/* body {
-    margin: 0;
-    padding: 0;
-    background: black;
-  } */
-
 .wrapper {
-  width: 100%;
-  /* height: 90vh; */
-  margin-top: 6%;
-  margin-bottom: 1%;
-  /* padding: 10%; */
-
+    width: 100%;
+    margin-top: 11%;
+    margin-bottom: 1%;
 }
 
 .wrapper,
 .social-icons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
 }
+
 
 /*** Containers and icons ***/
 
 .social-icon {
-  display: flex;
-
-  position: relative;
-  overflow: hidden;
-  /* Trim branded overlays */
-
-  width: var(--link-size);
-  height: var(--link-size);
-  margin: 10px;
-
-  background-color: #fff;
-  border-radius: 50%;
-  box-shadow: 0px 1px 3px #333;
-
-  text-decoration: none;
-
-  transition: var(--trans-props);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: var(--link-size);
+    height: var(--link-size);
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px #333;
+    text-decoration: none;
+    transition: var(--trans-props);
 }
 
 .social-icon i {
-  margin: auto;
-  /* Perfect centering thanks to parental flex */
-
-  font-size: 24px;
-  color: #333;
-
-  z-index: 1;
-  /* Make sure icons will be on top */
-
-  transition: var(--trans-props);
+    margin: auto;
+    font-size: 24px;
+    color: #333;
+    z-index: 1;
+    transition: var(--trans-props);
 }
+
 
 /*** Branded overlays from the bottom ***/
 
 .social-icon:after {
-  content: "";
-
-  width: var(--link-size);
-  height: var(--link-size);
-
-  position: absolute;
-
-  transform: translate(0, var(--link-size));
-
-  border-radius: 50%;
-  transition: var(--trans-props);
+    content: "";
+    width: var(--link-size);
+    height: var(--link-size);
+    position: absolute;
+    transform: translate(0, var(--link-size));
+    border-radius: 50%;
+    transition: var(--trans-props);
 }
 
 .social-icon.twitter:after {
-  background-color: #f2a60c;
+    background-color: #f2a60c;
 }
 
 .social-icon.github:after {
-  background-color: #24292e;
+    background-color: #24292e;
 }
 
 .social-icon.instagram:after {
-  background-image: linear-gradient(to bottom left,
-      #4f5bd5,
-      #962fbf,
-      #d62976,
-      #fa7e1e,
-      #feda75);
+    background-image: linear-gradient(to bottom left, #4f5bd5, #962fbf, #d62976, #fa7e1e, #feda75);
 }
+
 
 /*** Animations ***/
 
 .social-icon:hover {
-  transform: translateY(-4px);
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
 }
 
 .social-icon:hover i {
-  /*  transform: scale(1.1); */
-  color: #fff;
+    color: #fff;
 }
 
 .social-icon:hover:after {
-  transform: translate(0) scale(1.2);
+    transform: translate(0) scale(1.2);
 }
 
-/* scrollbar */
 ::-webkit-scrollbar {
-  width: 16px;
-
+    width: 16px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff;
+    background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333;
+    background: #333;
 }
 
-
 .card {
-  position: relative;
+    position: relative;
 }
 
 .card img {
-  max-width: 100%;
-  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #avatarIMG {
-  margin-left: 10%;
-  /* margin-top: 1%; */
-  margin-bottom: 1%;
+    margin-left: 10%;
+    /* margin-bottom: 1%; */
 }
 
 #nineCardsImg {
-  margin-left: 10%;
+    margin-left: 10%;
 }
 
 #challengeImg {
-  margin-left: 11%;
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
 
-#arenaIMG{
-  margin-left: 10%;
-  margin-top: 2%;
+#arenaIMG {
+    margin-left: 10%;
+    margin-top: 2%;
 }
 
-#reverseIMG{
-  margin-left: 9.5%;
+#reverseIMG {
+    margin-left: 9.5%;
 }
 
-#streakIMG{
-  margin-left: 11%;
+#streakIMG {
+    margin-left: 11%;
 }
