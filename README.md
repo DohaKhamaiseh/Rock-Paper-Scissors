@@ -83,37 +83,30 @@
 
 ---
 
-### Screenshots and Videos
+### Screenshots 
+<br>
 
-#### Game Video
-
-[![Rock Paper Scissors Demo](https://github.com/Group-05-rockPaperScissors/RPS-eel)](https://www.example.com/path_to_video)
+![Screenshot](./Screenshots/Home.png)
 
 <br>
 
-### Screenshots
-
-![Screenshot](./ScreenshotsAndVideos/Home.png)
+![Screenshot](./Screenshots/Modes.png)
 
 <br>
 
-![Screenshot](./ScreenshotsAndVideos/Modes.png)
+![Screenshot](./Screenshots/Cam.png)
 
 <br>
 
-![Screenshot](./ScreenshotsAndVideos/Cam.png)
+![Screenshot](./Screenshots/AvatarMode.png)
 
 <br>
 
-![Screenshot](./ScreenshotsAndVideos/AvatarMode.png)
+![Screenshot](./Screenshots/ArenaMode.png)
 
 <br>
 
-![Screenshot](./ScreenshotsAndVideos/ArenaMode.png)
-
-<br>
-
-![Screenshot](./ScreenshotsAndVideos/ClassicMode.png)
+![Screenshot](./Screenshots/ClassicMode.png)
 
 <br>
 
