@@ -123,11 +123,11 @@ function calculateTotalResult() {
     const ties = roundResults.filter(result => result === "It's a tie!").length;
 
     if (userWins > computerWins) {
-        return "Overall Result: You win!";
+        return "You win!";
     } else if (userWins < computerWins) {
-        return "Overall Result: Computer wins!";
+        return "Computer wins!";
     } else {
-        return "Overall Result: It's a tie!";
+        return "It's a tie!";
     }
 }
 
