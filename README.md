@@ -18,19 +18,33 @@
 <br>
 
 ### The game offers several exciting modes for players to enjoy:
+<br>
 
 - Classic Mode: 
     #### Play the traditional game of Rock Paper Scissors against the computer.
+<br>
+
 - Avatar Mode: 
     #### Customize and personalize your in-game avatar while playing Rock Paper Scissors.
+<br>
+
 - Challenge Mode: 
     #### Test your skills against different difficulty levels and see how far you can go.
+<br>
+
 - Reverse Mode: 
     #### Experience a twist in the game mechanics, where the traditional hierarchy of Rock Paper Scissors is reversed.
+<br>
+
 - Nine Cards Mode: 
     #### Play with an expanded set of options, including nine different choices instead of the usual three.
+
+<br>
+
 - Arena Mode: 
     #### Compete against comouter in matches with no rounds number.
+<br>
+
 - Streak Mode: 
     #### Aim for consecutive wins and try to achieve the longest winning streak possible. 
 
