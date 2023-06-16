@@ -88,10 +88,10 @@
 
 ### Feedback and Support
 #### If you have any feedback, suggestions, or issues with the game, please feel free to contact our team leader, Esmail Jawabreh, at esmailjawabreh@gmail.com. 
-#### We appreciate your support and involvement in making Rock Paper Scissors better.
+#### We appreciate your support and involvement in making our game better.
 <br>
 
-#### Thank you for using Rock Paper Scissors! Enjoy the game!
+#### Thank you for using our game! Enjoy!
 
 <br>
 
