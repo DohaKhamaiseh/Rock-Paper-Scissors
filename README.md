@@ -82,12 +82,3 @@
 - cvzone
 
 #### You can find the complete list of dependencies in the requirements.txt file.
-
-
-
-
-![Screenshot](./Screenshots/ClassicMode.png)
-
-<br>
-
----
