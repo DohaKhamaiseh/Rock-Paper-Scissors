@@ -83,37 +83,8 @@
 
 #### You can find the complete list of dependencies in the requirements.txt file.
 
-<br>
 
 
-#### Thank you for using our game! Enjoy!
-
-<br>
-
----
-
-### Screenshots 
-<br>
-
-![Screenshot](./Screenshots/Home.png)
-
-<br>
-
-![Screenshot](./Screenshots/Modes.png)
-
-<br>
-
-![Screenshot](./Screenshots/Cam.png)
-
-<br>
-
-![Screenshot](./Screenshots/AvatarMode.png)
-
-<br>
-
-![Screenshot](./Screenshots/ArenaMode.png)
-
-<br>
 
 ![Screenshot](./Screenshots/ClassicMode.png)
 
